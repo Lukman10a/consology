@@ -12,9 +12,9 @@ export default function NewsLetter() {
           <span> Newsletter.</span>
         </h1>
         <p>
-          Don't miss out on the latest updates, exclusive offers, and insightful
-          content. By subscribing to our newsletter, you'll be the first to know
-          about
+          Don&apos;t miss out on the latest updates, exclusive offers, and
+          insightful content. By subscribing to our newsletter, you&apos;ll be
+          the first to know about
         </p>
         <div className="flex gap-2 ">
           <input
