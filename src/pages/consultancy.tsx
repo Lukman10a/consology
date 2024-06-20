@@ -22,7 +22,7 @@ export default function Consultancy() {
               border: "1px solid #FFF3CF",
             }}
           >
-            <div className="font-medium text-[71.97px] ">
+            <div className="font-medium text-[71.97px]">
               <p>Experienced</p>
               <p className="text-[#E1A029]">Consulting</p>
               <p>Experts</p>
