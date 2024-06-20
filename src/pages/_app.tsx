@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <NavBar />
-      <main className={`scroll-smooth ${inter.variable} ${inter.className}`}>
+      <main className={`scroll-smooth  ${inter.className} ${inter.variable}`}>
         <Component {...pageProps} />
       </main>
       <Footer />
