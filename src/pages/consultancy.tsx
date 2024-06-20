@@ -5,6 +5,8 @@ import swift from "@/../../public/assets/swift.png";
 import collaborative from "@/../../public/assets/collaborative.png";
 import Button from "@/components/button";
 import Hero from "@/components/hero";
+import CaseStudies from "@/components/consultancyComponents/caseStudies";
+import NewsLetter from "@/components/consultancyComponents/newsLetter";
 
 export default function Consultancy() {
   return (
@@ -91,6 +93,8 @@ export default function Consultancy() {
           <Image src={collaborative} alt="" />
         </div>
       </div>
+      <CaseStudies />
+      <NewsLetter />
     </section>
   );
 }
