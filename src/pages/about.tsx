@@ -82,8 +82,6 @@ export default function About() {
           ))}
         </div>
       </div>
-
-      <NewsLetter />
     </div>
   );
 }
