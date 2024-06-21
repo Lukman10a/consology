@@ -4,7 +4,6 @@ import about from "@../../../public/assets/about.png";
 import consult from "@../../../public/assets/consult.svg";
 import reliable from "@../../../public/assets/reliable.svg";
 import focus from "@../../../public/assets/focus.svg";
-import NewsLetter from "@/components/newsLetter";
 import Image from "next/image";
 
 const WHY_US_DATA = [
@@ -47,9 +46,9 @@ export default function About() {
           }}
         >
           <h1 className="font-medium text-8xl">
-            <span className="text-[#3940AB]"> At</span> <span>Consology,</span>
+            <span className="text-[#3940AB]">At </span> <span>Consology,</span>
           </h1>
-          <p className="text-2xl font-medium">
+          <p className="text-2xl">
             At Consology, we are dedicated to transforming how small and
             medium-sized businesses operate through cutting-edge cloud
             technologies and comprehensive IT support. Our expertise spans
@@ -67,11 +66,11 @@ export default function About() {
           <span className="text-white">Choose us?</span>
         </h1>
 
-        <div className=" grid grid-cols-2 grid-rows-2 col-span-3 gap-6 my-10">
+        <div className=" grid grid-cols-2 grid-rows-2 col-span-3 gap-6 my-10 md:flex md:flex-col ">
           {WHY_US_DATA.map((data, index) => (
             <div
               className={`bg-[#1F1F1F] p-7 rounded-md space-y-4 ${
-                index === 2 ? "col-span-2" : ""
+                index === 2 ? "col-span-2 h-fit" : ""
               }`}
               key={index}
             >
