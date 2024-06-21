@@ -5,8 +5,8 @@ import swift from "@/../../public/assets/swift.png";
 import collaborative from "@/../../public/assets/collaborative.png";
 import Button from "@/components/button";
 import Hero from "@/components/hero";
-import CaseStudies from "@/components/consultancyComponents/caseStudies";
-import NewsLetter from "@/components/consultancyComponents/newsLetter";
+import CaseStudies from "@/components/caseStudies";
+import NewsLetter from "@/components/newsLetter";
 
 export default function Consultancy() {
   return (

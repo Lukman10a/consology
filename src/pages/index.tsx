@@ -5,11 +5,41 @@ import serviceInfra from "../../public/assets/service-infra.png";
 import serviceTailored from "../../public/assets/service-tailored.png";
 import chat from "../../public/assets/chat.png";
 import Button from "@/components/button";
+import TechnologyVendors from "@/components/technologyVendors";
+import NewsLetter from "@/components/newsLetter";
+import CaseStudies from "@/components/caseStudies";
 
 export default function Home() {
   return (
     <Fragment>
-      <section className="py-6 px-14 2md:px-10 ">
+      <header className="isolate relative  bg-cover bg-no-repeat">
+        <video
+          autoPlay
+          muted
+          loop
+          preload="none"
+          className="inset-0 absolute z-[-2] w-full  p-0"
+        >
+          <source src="/assets/hero-video.mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 -z-[2] bg-black opacity-50"></div>
+        <div className="p-20 space-y-6 ">
+          <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-full">
+            Unique Technology Solutions for Businesses
+          </h1>
+          <p className="text-xl text-white border-t-2 py-2 2md:text-lg">
+            At Consology, we’re more than just cloud consultants—we’re your
+            end-to-end I.T. support experts. Our mission is to empower
+            businesses by seamlessly integrating technology solutions. Whether
+            you’re considering cloud migration or need robust I.T. support,
+            Consology has you covered.
+          </p>
+          <Button text={"Contact us"} />
+          <TechnologyVendors />
+        </div>
+      </header>
+      <section className="py-10 px-14 2md:px-10 ">
         <h3 className="text-5xl mb-10 2md:text-3xl 2md:mb-8">
           <span className="text-[#BBBBBB]">Our</span> <span>Services</span>
         </h3>
@@ -61,6 +91,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CaseStudies />
+      <NewsLetter />
     </Fragment>
   );
 }

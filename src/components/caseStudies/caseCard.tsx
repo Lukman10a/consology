@@ -9,17 +9,19 @@ interface CaseCardProps {
 
 export default function CaseCard({ text, img }: CaseCardProps) {
   return (
-    <div
-      className="flex items-center justify-between my-2 p-10 rounded-md"
+    <article
+      className="flex gap-10 items-center justify-between rounded-lg p-10  bg-cover bg-no-repeat overflow-hidden"
       style={{
-        border: "2px solid rgba(0, 108, 254, 0.04)",
+        border: "6px solid #006CFE0A",
         backgroundImage: "url('/assets/case_bg.jpg')",
-        width: "100%",
       }}
     >
       <Image src={img} alt="" width={100} height={100} className="rounded-md" />
-      <p className="text-white text-xl whitespace-pre-line">{text}</p>
-      <Button text={"Read more"} className="bg-[#006CFE] rounded-xl p-4 px-8" />
-    </div>
+      <p className="flex-1 text-white text-xl ">{text}</p>
+      <Button
+        text={"Read more"}
+        className="bg-[#006CFE] rounded-full p-3 text-white"
+      />
+    </article>
   );
 }

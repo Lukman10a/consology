@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import mailbox from "../../../public/assets/mailbox.png";
-import Button from "../button";
+import mailbox from "../../public/assets/mailbox.png";
+import Button from "./button";
 export default function NewsLetter() {
   return (
     <div className="flex items-center justify-center p-10">
@@ -19,11 +19,11 @@ export default function NewsLetter() {
         <div className="flex gap-2 ">
           <input
             type="text"
-            className="bg-[#DDDDDD] rounded-md px-16 border-1 border-[#DDDDDD]"
+            className="bg-[#F8F8F8] rounded-md border border-[#DDDDDD]"
           />
           <Button
             text="Subscribe"
-            className="bg-black p-2 px-8 rounded-md text-white"
+            className="bg-black p-2 px-8 rounded-md text-white font-normal"
           />
         </div>
       </div>
