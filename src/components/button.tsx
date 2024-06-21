@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 interface ButtonProps {
@@ -7,8 +8,13 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ text, className }) => {
   return (
-    <button className={`border-b-4 border-black ${className}`}>
-      <p>{text}</p>
+    <button
+      className={cn(
+        "bg-white p-2 text-black rounded-md font-medium",
+        className
+      )}
+    >
+      {text}
     </button>
   );
 };

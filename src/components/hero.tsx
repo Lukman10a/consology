@@ -1,32 +1,45 @@
 import React from "react";
 import Button from "./button";
 import TechnologyVendors from "./technologyVendors";
+import { StaticImageData } from "next/image";
 
-export default function Hero() {
+export default function Hero({
+  heading,
+  subHeading,
+  heroBg,
+  sideImage,
+  containerClass,
+  hasBg = true,
+}: {
+  heading: string;
+  subHeading: string;
+  heroBg?: string | StaticImageData;
+  sideImage?: string;
+  containerClass?: string;
+  hasBg?: boolean;
+}) {
   return (
-    <div
-      className="p-20 space-y-6 bg-cover bg-center"
+    <header
+      className="p-20 isolate relative space-y-6 bg-cover bg-no-repeat"
       style={{
-        backgroundImage: "url('/assets/hero_bg.png')",
-        width: "100%",
+        backgroundImage: `url(${heroBg})`,
+        backgroundSize: "cover",
       }}
     >
-      <h1 className="font-medium text-8xl border-b-2 py-2 text-white">
-        <p>Cloud Consultancy</p>
-        <p>at its Peak</p>
+      <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-full">
+        {heading}
       </h1>
-      <p className="font-medium text-xl text-white">
-        We harness the power of cloud to streamline operations & increase
-        production for business. Our team of expert consultants has years of
-        experience working with small and medium-sized businesses across a range
-        of industries, and we’re dedicated to providing tailored solutions to
-        meet your unique needs.
-      </p>
+      {/* <hr /> */}
+      {subHeading && (
+        <p className="text-xl text-white border-t-2 py-2 2md:text-lg">
+          {subHeading}
+        </p>
+      )}
       <Button
         text={"Get started"}
         className="bg-white p-2 rounded-md font-semibold"
       />
       <TechnologyVendors />
-    </div>
+    </header>
   );
 }

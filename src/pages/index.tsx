@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import serviceInfra from "../../public/assets/service-infra.png";
 import serviceTailored from "../../public/assets/service-tailored.png";
 import chat from "../../public/assets/chat.png";
-import CtaButton from "@/components/CtaButton";
+import Button from "@/components/button";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
                 cloud solutions. We guide you through the entire process, from
                 strategy to implementation.
               </p>
-              <CtaButton content="Learn more" />
+              <Button text="Learn more" />
             </div>
             <div className="">
               <Image src={chat} alt="chat" height={250} width={500} />

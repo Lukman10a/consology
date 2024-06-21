@@ -3,7 +3,7 @@ import logo from "../../public/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { inter } from "@/lib/utils";
-import CtaButton from "./CtaButton";
+import Button from "./button";
 
 export default function NavBar() {
   return (
@@ -33,7 +33,7 @@ export default function NavBar() {
             <Link href={"/about"}>About</Link>
           </li>
         </ul>
-        <CtaButton content="Contact us" />
+        <Button text="Contact us" />
       </div>
     </nav>
   );

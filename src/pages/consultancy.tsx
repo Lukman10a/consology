@@ -11,7 +11,15 @@ import NewsLetter from "@/components/consultancyComponents/newsLetter";
 export default function Consultancy() {
   return (
     <section>
-      <Hero />
+      <Hero
+        heroBg={"/assets/hero_bg.png"}
+        heading=" Cloud Consultancy at its Peak"
+        subHeading="We harness the power of cloud to streamline operations & increase
+        production for business. Our team of expert consultants has years of
+        experience working with small and medium-sized businesses across a range
+        of industries, and we’re dedicated to providing tailored solutions to
+        meet your unique needs."
+      />
       <div className="p-8 space-y-4">
         <div className="flex gap-3">
           <div
