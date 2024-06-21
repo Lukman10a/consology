@@ -6,23 +6,25 @@ import serviceTailored from "../../public/assets/service-tailored.png";
 import chat from "../../public/assets/chat.png";
 import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
-import NewsLetter from "@/components/newsLetter";
 import CaseStudies from "@/components/caseStudies";
 
 export default function Home() {
   return (
     <Fragment>
       <header className="isolate relative  bg-cover bg-no-repeat">
-        <video
-          autoPlay
-          muted
-          loop
-          preload="none"
-          className="inset-0 absolute z-[-2] w-full  p-0"
-        >
-          <source src="/assets/hero-video.mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="inset-0 absolute z-[-2] h-full   p-0">
+          <video
+            width="100%"
+            className="w-full "
+            autoPlay
+            muted
+            loop
+            preload="none"
+          >
+            <source src="/assets/hero-video.mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="absolute inset-0 -z-[2] bg-black opacity-50"></div>
         <div className="p-20 space-y-6 ">
           <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-full">
@@ -39,7 +41,7 @@ export default function Home() {
           <TechnologyVendors />
         </div>
       </header>
-      <section className="py-10 px-14 2md:px-10 ">
+      <section className="py-12 px-14 2md:px-10">
         <h3 className="text-5xl mb-10 2md:text-3xl 2md:mb-8">
           <span className="text-[#BBBBBB]">Our</span> <span>Services</span>
         </h3>
@@ -92,7 +94,6 @@ export default function Home() {
         </div>
       </section>
       <CaseStudies />
-      <NewsLetter />
     </Fragment>
   );
 }

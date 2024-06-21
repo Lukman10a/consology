@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer
-      className={`${inter.variable} font-inter flex justify-between bg-black gap-11 py-10 px-10 text-white bg-[url('/assets/image 3.png')]`}
+      className={`${inter.variable} font-inter flex justify-between bg-black gap-11 py-10 px-10 text-white bg-[url('/assets/image 3.png')] md:flex-wrap`}
     >
       <div className="space-y-4 flex-1">
         <Link href={"/"}>

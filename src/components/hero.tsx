@@ -2,25 +2,31 @@ import React from "react";
 import Button from "./button";
 import TechnologyVendors from "./technologyVendors";
 import { StaticImageData } from "next/image";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Hero({
   heading,
   subHeading,
   heroBg,
-  sideImage,
   containerClass,
-  hasBg = true,
+  ctaHref = "/contact",
+  ctaText = "Contact us",
 }: {
   heading: string;
   subHeading: string;
   heroBg?: string | StaticImageData;
-  sideImage?: string;
   containerClass?: string;
+  ctaHref?: string;
+  ctaText?: string;
   hasBg?: boolean;
 }) {
   return (
     <header
-      className="p-20 isolate relative space-y-6 bg-cover bg-no-repeat"
+      className={cn(
+        "p-20 isolate relative space-y-6 bg-cover bg-no-repeat",
+        containerClass
+      )}
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
@@ -31,14 +37,16 @@ export default function Hero({
       </h1>
       {/* <hr /> */}
       {subHeading && (
-        <p className="text-xl text-white border-t-2 py-2 2md:text-lg">
+        <p className="text-xl text-white border-t-2 py-2 2md:text-lg mb-6">
           {subHeading}
         </p>
       )}
-      <Button
-        text={"Get started"}
-        className="bg-white p-2 rounded-md font-semibold"
-      />
+      <Link href={ctaHref}>
+        <Button
+          text={ctaText}
+          className="bg-white p-2 rounded-md font-semibold"
+        />
+      </Link>
       <TechnologyVendors />
     </header>
   );

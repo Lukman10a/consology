@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { inter } from "@/lib/utils";
 import Button from "./button";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function NavBar() {
   return (
@@ -15,7 +16,7 @@ export default function NavBar() {
           <Image src={logo} alt="logo" />
         </Link>
       </div>
-      <div className="flex gap-10 items-center">
+      <div className="flex gap-10 items-center md:hidden">
         <ul className="flex gap-5 items-center">
           <li>
             <Link href={"/"}>Home</Link>
@@ -35,6 +36,9 @@ export default function NavBar() {
         </ul>
         <Button text="Contact us" />
       </div>
+      <button className="hidden md:block">
+        <RxHamburgerMenu color="white" size={24} />
+      </button>
     </nav>
   );
 }

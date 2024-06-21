@@ -19,8 +19,9 @@ export default function Consultancy() {
         experience working with small and medium-sized businesses across a range
         of industries, and we’re dedicated to providing tailored solutions to
         meet your unique needs."
+        ctaText="Get started"
       />
-      <div className="p-8 space-y-4">
+      <section className="p-8 space-y-4">
         <div className="flex gap-3">
           <div
             className="rounded-md p-12 space-y-4"
@@ -100,7 +101,7 @@ export default function Consultancy() {
           </div>
           <Image src={collaborative} alt="" />
         </div>
-      </div>
+      </section>
       <CaseStudies />
       <NewsLetter />
     </section>

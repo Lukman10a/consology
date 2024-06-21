@@ -4,7 +4,7 @@ import mailbox from "../../public/assets/mailbox.png";
 import Button from "./button";
 export default function NewsLetter() {
   return (
-    <div className="flex items-center justify-center p-10">
+    <div className="flex items-center justify-center p-14">
       <div className="space-y-6">
         <h1 className="font-medium text-7xl">
           <span className="text-[#BBBBBB]"> Subscribe to our </span>
