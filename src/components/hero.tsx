@@ -37,11 +37,11 @@ export default function Hero({
       </h1>
       {/* <hr /> */}
       {subHeading && (
-        <p className="text-xl text-white border-t-2 py-2 2md:text-lg mb-6">
+        <p className="text-xl text-white border-t-2 py-2 2md:text-lg ">
           {subHeading}
         </p>
       )}
-      <Link href={ctaHref}>
+      <Link href={ctaHref} className="mt-6 inline-block">
         <Button
           text={ctaText}
           className="bg-white p-2 rounded-md font-semibold"
