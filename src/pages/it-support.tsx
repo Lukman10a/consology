@@ -9,6 +9,7 @@ import vmware from "../../public/assets/vmware.png";
 import cisco from "../../public/assets/icons_cisco.png";
 import hp from "../../public/assets/hp.png";
 import CaseStudies from "@/components/caseStudies";
+import ArticleCard from "@/components/itSupport/articleCard";
 
 const ItSupport = () => {
   return (
@@ -21,37 +22,22 @@ const ItSupport = () => {
         heroBg={"/assets/it-support.jpg"}
       />
       <section className="p-10 space-y-8">
+        <ArticleCard
+          title="End User Support"
+          description="We provide responsive help desk services to assist your employees with any technical issues they encounter. From software troubleshooting to hardware setup, our team ensures your end users stay productive."
+          image={support2}
+          bgImage="/assets/support-1.jpg"
+        />
+        <ArticleCard
+          title="Infrastructure Management"
+          description="Our experts oversee your entire infrastructure, including servers, networks, and cloud services. We optimize performance, monitor security, and handle maintenance tasks proactively."
+          image={infra1}
+          bgImage="/assets/infra-2.jpg"
+          reverse
+        />
+
         <article className="flex gap-8">
-          <div className="text-white space-y-6 rounded-md p-8 overflow-hidden bg-[url('/assets/support-1.jpg')] flex-[3] bg-no-repeat bg-cover">
-            <p className="text-5xl font-medium">End User Support</p>
-            <p className="text-l font-normal">
-              We provide responsive help desk services to assist your employees
-              with any technical issues they encounter. From software
-              troubleshooting to hardware setup, our team ensures your end users
-              stay productive.
-            </p>
-            <button className="underline text-xl">Get started</button>
-          </div>
-          <div className="rounded-md overflow-hidden flex-[2]">
-            <Image src={support2} alt="" className="h-full" />
-          </div>
-        </article>
-        <article className="flex gap-8 ">
-          <div className="rounded-md overflow-hidden flex-[2] ">
-            <Image src={infra1} alt="" className="h-full" />
-          </div>
-          <div className="text-white space-y-6 rounded-md p-10 overflow-hidden bg-[url('/assets/infra-2.jpg')] flex-[3] bg-no-repeat bg-cover">
-            <p className="text-5xl font-medium">Infrastructure Management</p>
-            <p className="text-l font-normal">
-              Our experts oversee your entire infrastructure, including servers,
-              networks, and cloud services. We optimize performance, monitor
-              security, and handle maintenance tasks proactively.
-            </p>
-            <button className="underline text-xl">Get started</button>
-          </div>
-        </article>
-        <article className="flex gap-8">
-          <div className="flex-[3] flex flex-col gap-5 ">
+          <div className="flex-[3] flex flex-col gap-5">
             <div className="text-black flex-1  space-y-6 rounded-md p-10 overflow-hidden bg-[url('/assets/vendor-1.jpg')]  bg-no-repeat bg-cover">
               <p className="text-5xl font-medium">Vendor Coordination</p>
               <p className="text-l font-normal">
