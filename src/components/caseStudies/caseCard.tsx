@@ -17,7 +17,7 @@ export default function CaseCard({ text, img }: CaseCardProps) {
       }}
     >
       <Image src={img} alt="" width={100} height={100} className="rounded-md" />
-      <p className="flex-1 text-white text-xl ">{text}</p>
+      <p className="flex-1 text-white text-xl md:text-lg">{text}</p>
       <Button
         text={"Read more"}
         className="bg-[#006CFE] rounded-full p-3 text-white"

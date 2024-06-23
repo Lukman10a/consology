@@ -6,12 +6,12 @@ export default function NewsLetter() {
   return (
     <div className="flex items-center justify-center p-14 md:flex-wrap">
       <div className="space-y-6">
-        <h1 className="font-medium text-7xl">
+        <h1 className="font-medium text-7xl md:text-4xl">
           <span className="text-[#BBBBBB]"> Subscribe to our </span>
           <br />
           <span> Newsletter.</span>
         </h1>
-        <p>
+        <p className="md:text-sm">
           Don&apos;t miss out on the latest updates, exclusive offers, and
           insightful content. By subscribing to our newsletter, you&apos;ll be
           the first to know about

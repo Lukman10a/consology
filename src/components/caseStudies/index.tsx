@@ -11,7 +11,7 @@ export default function CaseStudies({
   isDetailsPage?: boolean;
 }) {
   return (
-    <div className="bg-black p-12">
+    <div className="bg-black p-12 md:px-8">
       {isDetailsPage === false && (
         <div className="text-center mb-6">
           <Button
@@ -19,7 +19,7 @@ export default function CaseStudies({
             className="bg-[#006CFE] rounded-full p-2 text-white font-normal"
           />
 
-          <h1 className="font-extrabold text-8xl">
+          <h1 className="font-extrabold text-8xl md:text-5xl">
             <span className="text-white">CASE </span>
             <span className="text-[#5D5D5D]">STUDIES.</span>
           </h1>
