@@ -39,7 +39,7 @@ const ItSupport = () => {
           reverse
         />
 
-        <article className="flex gap-8">
+        <article className="flex gap-8 md:flex-col">
           <div className="flex-[3] flex flex-col gap-5">
             <div className="text-black flex-1  space-y-6 rounded-md p-10 overflow-hidden bg-[url('/assets/vendor-1.jpg')]  bg-no-repeat bg-cover">
               <p className="text-5xl font-medium">Vendor Coordination</p>
@@ -60,9 +60,9 @@ const ItSupport = () => {
             <Image src={vendor2} alt="" className="h-full" />
           </div>
         </article>
-        <article className="flex gap-8">
+        <article className="flex gap-8 md:flex-col">
           <div className="flex-[3] flex flex-col gap-5">
-            <div className="text-black flex-1 gap-5  rounded-md p-10 overflow-hidden bg-white shadow-md  flex items-center">
+            <div className="text-black md:flex-col flex-1 gap-5  rounded-md p-10 overflow-hidden bg-white shadow-md  flex items-center">
               <div className="space-y-6">
                 <p className="text-4xl font-medium">
                   Backup and Disaster Recovery
@@ -77,11 +77,11 @@ const ItSupport = () => {
                 <Image src={backup} alt="" />
               </div>
             </div>
-            <div className="text-black flex-1 flex gap-5 items-center  space-y-6 rounded-md  overflow-hidden bg-white shadow-md ">
+            <div className="md:flex-col text-black flex-1 flex gap-5 items-center  space-y-6 rounded-md  overflow-hidden bg-white shadow-md ">
               <div>
                 <Image src={customer} alt="" />
               </div>
-              <div className=" py-10 pr-5">
+              <div className="py-10 pr-5 md:pl-5">
                 <p className="text-4xl font-medium mb-4">
                   Customer-Centric Approach
                 </p>

@@ -24,7 +24,7 @@ export default function Hero({
   return (
     <header
       className={cn(
-        "p-20 isolate relative space-y-6 bg-cover bg-no-repeat",
+        "p-20 isolate relative space-y-6 bg-cover bg-no-repeat md:px-10",
         containerClass
       )}
       style={{

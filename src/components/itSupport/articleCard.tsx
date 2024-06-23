@@ -18,7 +18,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   reverse,
 }) => {
   return (
-    <article className={cn(`flex gap-8 `, reverse ? "flex-row-reverse" : "")}>
+    <article
+      className={cn(
+        `flex gap-8  md:flex-col`,
+        reverse ? "flex-row-reverse" : ""
+      )}
+    >
       <div
         className={`text-white space-y-6 rounded-md p-8 overflow-hidden flex-[3] bg-no-repeat bg-cover`}
         style={{

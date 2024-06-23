@@ -3,16 +3,58 @@ import React from "react";
 
 export default function TechnologyVendors() {
   return (
-    <div className="flex items-center justify-between p-4 rounded-md bg-[#0000004D] text-white">
-      <p>Our Technologies and vendors:</p>
-      <div className="flex gap-8">
-        <Image src={require("../../public/assets/microsoft.svg")} alt="" />
-        <Image src={require("../../public/assets/teams.svg")} alt="" />
-        <Image src={require("../../public/assets/sharepoint.svg")} alt="" />
-        <Image src={require("../../public/assets/azure.svg")} alt="" />
-        <Image src={require("../../public/assets/onedrive.svg")} alt="" />
-        <Image src={require("../../public/assets/powerapps.svg")} alt="" />
-        <Image src={require("../../public/assets/msexchange.svg")} alt="" />
+    <div className="flex items-center justify-between p-4 rounded-md bg-[#0000004D] text-white md:flex-col md:items-center gap-6">
+      <p className="md:text-lg text-xl ">Our Technologies and Vendors:</p>
+      <div className="flex flex-wrap gap-4 md:gap-6 lg:gap-8 justify-center items-center">
+        <div className="md:w-16 w-20">
+          <Image
+            src={require("../../public/assets/microsoft.svg")}
+            alt="Microsoft"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="md:w-10 w-20">
+          <Image
+            src={require("../../public/assets/teams.svg")}
+            alt="Teams"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="md:w-16 w-20">
+          <Image
+            src={require("../../public/assets/sharepoint.svg")}
+            alt="SharePoint"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="md:w-16 w-20">
+          <Image
+            src={require("../../public/assets/azure.svg")}
+            alt="Azure"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="md:w-16 w-20">
+          <Image
+            src={require("../../public/assets/onedrive.svg")}
+            alt="OneDrive"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="md:w-16 w-20">
+          <Image
+            src={require("../../public/assets/powerapps.svg")}
+            alt="PowerApps"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className=" md:w-16 w-20">
+          <Image
+            src={require("../../public/assets/msexchange.svg")}
+            alt="Exchange"
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </div>
   );
