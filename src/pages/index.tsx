@@ -11,23 +11,16 @@ import CaseStudies from "@/components/caseStudies";
 export default function Home() {
   return (
     <Fragment>
-      <header className="isolate relative  bg-cover bg-no-repeat">
-        <div className="inset-0 absolute z-[-2] h-full   p-0">
-          <video
-            width="100%"
-            className="w-full "
-            autoPlay
-            muted
-            loop
-            preload="none"
-          >
+      <header className="isolate relative  bg-cover bg-no-repeat ">
+        <div className="inset-0 absolute z-[-2] h-full p-0 ">
+          <video width="100%" autoPlay muted loop preload="none">
             <source src="/assets/hero-video.mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div className="absolute inset-0 -z-[2] bg-black opacity-50"></div>
-        <div className="p-20 space-y-6 ">
-          <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-full">
+        <div className="p-20 space-y-6  md:px-10">
+          <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-fit  text-balance">
             Unique Technology Solutions for Businesses
           </h1>
           <p className="text-xl text-white border-t-2 py-2 2md:text-lg">
