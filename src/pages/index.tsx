@@ -18,7 +18,7 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="absolute inset-0 -z-[2] bg-black opacity-50"></div>
+        <div className="absolute inset-0 z-[-1] bg-black opacity-50"></div>
         <div className="p-20 space-y-6  md:px-10">
           <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-fit  text-balance">
             Unique Technology Solutions for Businesses

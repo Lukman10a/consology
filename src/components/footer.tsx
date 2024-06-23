@@ -25,7 +25,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="flex gap-10 flex-1 justify-center">
+      <div className="flex gap-10 flex-1 justify-center md:flex-wrap">
         <div className="font-medium">
           <p className="mb-3 text-sm text-[#645D5D]">Company</p>
           <ul className="space-y-3">
