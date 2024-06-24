@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "../../public/assets/logo.svg";
+import logo from "../../../public/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { inter } from "@/lib/utils";
-import Button from "./button";
-import { RxHamburgerMenu } from "react-icons/rx";
+import Button from "../button";
+import { MobileMenu } from "../MobileMenu";
 
-export default function NavBar() {
+export default function Index() {
   return (
     <nav
       className={`${inter.variable} font-inter flex items-center justify-between bg-black  py-5 px-10 text-white bg-[url('/assets/image 3.png')] gap-10`}
@@ -16,7 +16,7 @@ export default function NavBar() {
           <Image src={logo} alt="logo" />
         </Link>
       </div>
-      <div className="flex gap-10 items-center md:hidden">
+      <div className="flex gap-10 items-center 2md:hidden">
         <ul className="flex gap-5 items-center">
           <li>
             <Link href={"/"}>Home</Link>
@@ -34,11 +34,13 @@ export default function NavBar() {
             <Link href={"/about"}>About</Link>
           </li>
         </ul>
-        <Button text="Contact us" />
+        <Link href={"/contact"}>
+          <Button text="Contact us" />
+        </Link>
       </div>
-      <button className="hidden md:block">
-        <RxHamburgerMenu color="white" size={24} />
-      </button>
+      <div className="hidden 2md:block">
+        <MobileMenu />
+      </div>
     </nav>
   );
 }

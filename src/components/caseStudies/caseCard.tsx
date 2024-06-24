@@ -10,9 +10,8 @@ interface CaseCardProps {
 export default function CaseCard({ text, img }: CaseCardProps) {
   return (
     <article
-      className="flex md:flex-col gap-10 items-center justify-between rounded-lg p-10  bg-cover bg-no-repeat overflow-hidden"
+      className="flex md:flex-col gap-10 items-center justify-between  rounded-3xl p-10  bg-cover bg-no-repeat overflow-hidden bg-center  md:items-start outline outline-8 outline-[#006CFE0A]"
       style={{
-        border: "6px solid #006CFE0A",
         backgroundImage: "url('/assets/case_bg.jpg')",
       }}
     >

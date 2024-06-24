@@ -26,7 +26,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
       }`}
     >
       <div
-        className={`rounded-lg p-8 md:p-12  flex-[3] flex items-center`}
+        className={`rounded-lg p-8 md:p-12 flex-[3] md:flex-auto flex items-center`}
         style={{
           background: bgColor,
           border: `1px solid ${borderColor}`,
@@ -38,7 +38,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           <Button text="Get started" />
         </div>
       </div>
-      <div className="flex-[2] rounded-lg overflow-hidden">
+      <div className="flex-[2] md:flex-auto rounded-lg overflow-hidden md:h-[250px]">
         <Image src={image} alt="" className="w-full h-full object-cover" />
       </div>
     </article>

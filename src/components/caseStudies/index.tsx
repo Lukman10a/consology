@@ -19,13 +19,13 @@ export default function CaseStudies({
             className="bg-[#006CFE] rounded-full p-2 text-white font-normal"
           />
 
-          <h1 className="font-extrabold text-8xl md:text-5xl">
+          <h1 className="font-extrabold text-8xl md:text-5xl mt-3">
             <span className="text-white">CASE </span>
             <span className="text-[#5D5D5D]">STUDIES.</span>
           </h1>
         </div>
       )}
-      <div className="space-y-5">
+      <div className="space-y-7">
         {CASE_CARD_DATA.map((item, index) => (
           <CaseCard text={item.text} img={item.img?.src || ""} key={index} />
         ))}

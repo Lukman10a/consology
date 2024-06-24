@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer
-      className={`${inter.variable} font-inter flex justify-between bg-black gap-11 py-10 px-10 text-white bg-[url('/assets/image 3.png')] md:flex-wrap`}
+      className={`${inter.variable} font-inter flex justify-between bg-black gap-11 py-10 px-10 text-white bg-[url('/assets/image 3.png')] md:flex-col`}
     >
       <div className="space-y-4 flex-1">
         <Link href={"/"}>
@@ -30,13 +30,13 @@ export default function Footer() {
           <p className="mb-3 text-sm text-[#645D5D]">Company</p>
           <ul className="space-y-3">
             <li className="text-sm text-[#EAECF0]">
-              <Link href={"/"}>About</Link>
+              <Link href={"/about"}>About</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
               <Link href={"/"}>Blog</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
-              <Link href={"/"}>Career</Link>
+              <Link href={"/careers"}>Career</Link>
             </li>
           </ul>
         </div>
@@ -50,12 +50,12 @@ export default function Footer() {
               <Link href={"/"}>Insights</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
-              <Link href={"/"}>Case Studies</Link>
+              <Link href={"/case-studies"}>Case Studies</Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex gap-5 flex-1 justify-end">
+      <div className="flex gap-5 flex-1 justify-end md:justify-start">
         <Link target="_blank" href="https://www.linkedin.com/company/consolgy/">
           <FaLinkedin size={24} />
         </Link>

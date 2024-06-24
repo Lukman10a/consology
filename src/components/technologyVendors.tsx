@@ -4,7 +4,7 @@ import React from "react";
 export default function TechnologyVendors() {
   return (
     <div className="flex items-center justify-between p-4 rounded-md bg-[#0000004D] text-white md:flex-col md:items-center gap-6">
-      <p className="md:text-lg text-xl ">Our Technologies and Vendors:</p>
+      <p className="md:text-lg text-xl">Our Technologies and Vendors:</p>
       <div className="flex flex-wrap gap-4 md:gap-6 lg:gap-8 justify-center items-center">
         <div className="w-12">
           <Image
