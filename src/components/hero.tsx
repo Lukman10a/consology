@@ -24,27 +24,27 @@ export default function Hero({
   return (
     <header
       className={cn(
-        "p-20 isolate relative space-y-6 bg-cover bg-no-repeat md:px-10",
-        containerClass
+        "relative isolate space-y-6 bg-cover bg-no-repeat p-20 md:px-10",
+        containerClass,
       )}
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
       }}
     >
-      <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-full">
+      <h1 className="w-10/12 text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
         {heading}
       </h1>
       {/* <hr /> */}
       {subHeading && (
-        <p className="text-xl text-white border-t-2 py-2 2md:text-lg ">
+        <p className="border-t-2 py-2 text-xl text-white 2md:text-lg">
           {subHeading}
         </p>
       )}
       <Link href={ctaHref} className="mt-6 inline-block">
         <Button
           text={ctaText}
-          className="bg-white p-2 rounded-md font-semibold"
+          className="rounded-md bg-white p-2 font-semibold"
         />
       </Link>
       <TechnologyVendors />

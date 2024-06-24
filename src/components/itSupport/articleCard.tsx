@@ -20,12 +20,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   return (
     <article
       className={cn(
-        `flex gap-8  md:flex-col`,
-        reverse ? "flex-row-reverse" : ""
+        `flex gap-8 md:flex-col`,
+        reverse ? "flex-row-reverse" : "",
       )}
     >
       <div
-        className={`text-white space-y-6 rounded-md p-8 overflow-hidden flex-[3] bg-no-repeat bg-cover`}
+        className={`flex-[3] space-y-6 overflow-hidden rounded-md bg-cover bg-no-repeat p-8 text-white`}
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
@@ -33,9 +33,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
       >
         <p className="text-5xl font-medium">{title}</p>
         <p className="text-l font-normal">{description}</p>
-        <button className="underline text-xl">Get started</button>
+        <button className="text-xl underline">Get started</button>
       </div>
-      <div className="rounded-md overflow-hidden flex-[2]">
+      <div className="flex-[2] overflow-hidden rounded-md">
         <Image src={image} alt="" className="h-full w-full object-cover" />
       </div>
     </article>

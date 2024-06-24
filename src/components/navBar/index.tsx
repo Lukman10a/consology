@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { inter } from "@/lib/utils";
 import Button from "../button";
-import { MobileMenu } from "../MobileMenu";
+import { MobileMenu } from "./MobileMenu";
 
 export default function Index() {
   return (

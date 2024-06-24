@@ -7,9 +7,9 @@ export default function Contact() {
       <section className="p-10">
         <Button
           text={"Contact Us"}
-          className="bg-[#006CFE] rounded-full p-2 text-white font-normal"
+          className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
         />
-        <h1 className="font-medium text-8xl  w-11/12 2md:text-5xl 2md:w-full">
+        <h1 className="w-11/12 text-8xl font-medium 2md:w-full 2md:text-5xl">
           Let’s hear from you
         </h1>
 

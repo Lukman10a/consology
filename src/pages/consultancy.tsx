@@ -15,7 +15,7 @@ export default function Consultancy() {
         subHeading="We harness the power of cloud to streamline operations & increase production for business. Our team of expert consultants has years of experience working with small and medium-sized businesses across a range of industries, and we’re dedicated to providing tailored solutions to meet your unique needs."
         ctaText="Get started"
       />
-      <section className="p-8 space-y-4">
+      <section className="space-y-4 p-8">
         <ArticleCard
           title={
             <>

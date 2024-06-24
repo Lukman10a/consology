@@ -34,7 +34,7 @@ export default function About() {
     <div>
       <header
         className={cn(
-          "p-20 isolate relative space-y-6 bg-cover bg-no-repeat md:px-10"
+          "relative isolate space-y-6 bg-cover bg-no-repeat p-20 md:px-10",
         )}
         style={{
           backgroundImage: `url(/assets/about_bg.png)`,
@@ -43,24 +43,24 @@ export default function About() {
       >
         <Button
           text={"About Us"}
-          className="bg-[#006CFE] rounded-full p-2 text-white font-normal"
+          className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
         />
-        <h1 className="font-medium text-8xl text-white w-11/12 2md:text-5xl 2md:w-full">
+        <h1 className="w-11/12 text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
           Empowering Businesses with Innovative Cloud and IT Solutions
         </h1>
         <TechnologyVendors />
       </header>
 
-      <section className="flex gap-6 justify-between p-12 md:flex-wrap">
+      <section className="flex justify-between gap-6 p-12 md:flex-wrap">
         <div
-          className="p-12 space-y-6 flex-[4] md:flex-auto"
+          className="flex-[4] space-y-6 p-12 md:flex-auto"
           style={{
             backgroundImage: `url("../assets/about_consology.jpg")`,
             backgroundSize: "cover",
             borderRadius: 20,
           }}
         >
-          <h1 className="font-medium text-8xl md:text-4xl">
+          <h1 className="text-8xl font-medium md:text-4xl">
             <span className="text-[#3940AB]">At </span> <span>Consology,</span>
           </h1>
           <p className="text-2xl md:text-lg">
@@ -72,21 +72,21 @@ export default function About() {
             and growth.
           </p>
         </div>
-        <div className="flex-[2] overflow-hidden rounded-lg md:flex-auto md:h-[200px]">
+        <div className="flex-[2] overflow-hidden rounded-lg md:h-[200px] md:flex-auto">
           <Image src={at_about} alt="" className="h-full object-cover" />
         </div>
       </section>
 
-      <div className="bg-black p-12 ">
-        <h1 className="font-medium text-8xl mb-4 md:text-4xl">
+      <div className="bg-black p-12">
+        <h1 className="mb-4 text-8xl font-medium md:text-4xl">
           <span className="text-[#5D5D5D]">Why </span>
           <span className="text-white">Choose us?</span>
         </h1>
 
-        <div className=" grid grid-cols-2 grid-rows-2 col-span-3 gap-6 my-10 md:flex md:flex-col ">
+        <div className="col-span-3 my-10 grid grid-cols-2 grid-rows-2 gap-6 md:flex md:flex-col">
           {WHY_US_DATA.map((data, index) => (
             <div
-              className={`bg-[#1F1F1F] p-7 rounded-md space-y-4 ${
+              className={`space-y-4 rounded-md bg-[#1F1F1F] p-7 ${
                 index === 2 ? "col-span-2 h-fit" : ""
               }`}
               key={index}

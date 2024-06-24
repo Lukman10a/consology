@@ -16,7 +16,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuItem,
 } from "@radix-ui/react-dropdown-menu";
-import Button from "./button";
+import Button from "../button";
 
 const servicesSubnav = [
   {

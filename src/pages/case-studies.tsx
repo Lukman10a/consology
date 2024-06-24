@@ -8,26 +8,26 @@ const CaseStudiesPage = () => {
     <Fragment>
       <header
         className={cn(
-          "p-20 isolate relative space-y-6 bg-cover bg-no-repeat md:px-10"
+          "relative isolate space-y-6 bg-cover bg-no-repeat p-20 md:px-10",
         )}
         style={{
           backgroundImage: `url(/assets/caseStudyBg.jpg)`,
           backgroundSize: "cover",
         }}
       >
-        <h1 className="font-medium text-8xl text-white w-10/12 2md:text-5xl 2md:w-full">
+        <h1 className="w-10/12 text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
           Case Studies
         </h1>
 
-        <p className="text-xl text-white border-t-2 py-2 2md:text-lg ">
+        <p className="border-t-2 py-2 text-xl text-white 2md:text-lg">
           Discover how we&apos;ve helped businesses transform and thrive in the
           cloud.
         </p>
       </header>
-      <section className="container mx-auto p-12 space-y-8">
+      <section className="container mx-auto space-y-8 p-12">
         <ol className="space-y-8">
           <li>
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="mb-4 text-lg font-semibold">
               1. Multi-Cloud Strategies Becoming the Norm
             </h2>
             <p className="mb-2">
@@ -46,7 +46,7 @@ const CaseStudiesPage = () => {
             </p>
           </li>
           <li>
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="mb-4 text-lg font-semibold">
               2. Edge Computing Gaining Momentum
             </h2>
             <p className="mb-2">
@@ -65,7 +65,7 @@ const CaseStudiesPage = () => {
             </p>
           </li>
           <li>
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="mb-4 text-lg font-semibold">
               3. AI and Machine Learning Integration
             </h2>
             <p className="mb-2">
@@ -84,7 +84,7 @@ const CaseStudiesPage = () => {
             </p>
           </li>
           <li>
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="mb-4 text-lg font-semibold">
               4. Serverless Computing Expanding
             </h2>
             <p className="mb-2">
@@ -102,7 +102,7 @@ const CaseStudiesPage = () => {
             </p>
           </li>
           <li>
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="mb-4 text-lg font-semibold">
               5. Enhanced Cloud Security and Compliance
             </h2>
             <p className="mb-2">
@@ -121,7 +121,7 @@ const CaseStudiesPage = () => {
             </p>
           </li>
           <li>
-            <h2 className="text-lg font-semibold mb-4">Conclusion</h2>
+            <h2 className="mb-4 text-lg font-semibold">Conclusion</h2>
             <p className="mb-2">
               The future of cloud computing in 2024 is marked by innovation and
               transformation. Businesses that stay informed about these trends

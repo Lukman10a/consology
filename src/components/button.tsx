@@ -10,8 +10,8 @@ const Button: React.FC<ButtonProps> = ({ text, className }) => {
   return (
     <button
       className={cn(
-        "bg-white p-2 text-black rounded-md font-medium",
-        className
+        "rounded-md bg-white p-2 font-medium text-black",
+        className,
       )}
     >
       {text}

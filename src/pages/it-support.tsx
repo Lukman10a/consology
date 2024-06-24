@@ -24,7 +24,7 @@ const ItSupport = () => {
         }
         heroBg={"/assets/it-support.jpg"}
       />
-      <section className="p-10 space-y-8">
+      <section className="space-y-8 p-10">
         <ArticleCard
           title="End User Support"
           description="We provide responsive help desk services to assist your employees with any technical issues they encounter. From software troubleshooting to hardware setup, our team ensures your end users stay productive."
@@ -40,8 +40,8 @@ const ItSupport = () => {
         />
 
         <article className="flex gap-8 md:flex-col">
-          <div className="flex-[3] flex flex-col gap-5">
-            <div className="text-black flex-1  space-y-6 rounded-md p-10 overflow-hidden bg-[url('/assets/vendor-1.jpg')]  bg-no-repeat bg-cover">
+          <div className="flex flex-[3] flex-col gap-5">
+            <div className="flex-1 space-y-6 overflow-hidden rounded-md bg-[url('/assets/vendor-1.jpg')] bg-cover bg-no-repeat p-10 text-black">
               <p className="text-5xl font-medium">Vendor Coordination</p>
               <p className="text-l font-normal">
                 Dealing with multiple vendors can be complex. Let us manage
@@ -49,20 +49,20 @@ const ItSupport = () => {
                 VMWare, Cisco, HP, and others to streamline support.
               </p>
             </div>
-            <div className="rounded-md p-10 overflow-hidden bg-black flex gap-5 justify-between items-center">
+            <div className="flex items-center justify-between gap-5 overflow-hidden rounded-md bg-black p-10">
               <Image src={microsoft} alt="" />
               <Image src={vmware} alt="" />
               <Image src={cisco} alt="" />
               <Image src={hp} alt="" />
             </div>
           </div>
-          <div className="rounded-md overflow-hidden flex-[2] ">
+          <div className="flex-[2] overflow-hidden rounded-md">
             <Image src={vendor2} alt="" className="h-full" />
           </div>
         </article>
         <article className="flex gap-8 md:flex-col">
-          <div className="flex-[3] flex flex-col gap-5">
-            <div className="text-black md:flex-col flex-1 gap-5  rounded-md p-10 overflow-hidden bg-white shadow-md  flex items-center">
+          <div className="flex flex-[3] flex-col gap-5">
+            <div className="flex flex-1 items-center gap-5 overflow-hidden rounded-md bg-white p-10 text-black shadow-md md:flex-col">
               <div className="space-y-6">
                 <p className="text-4xl font-medium">
                   Backup and Disaster Recovery
@@ -77,19 +77,19 @@ const ItSupport = () => {
                 <Image src={backup} alt="" />
               </div>
             </div>
-            <div className="md:flex-col text-black flex-1 flex gap-5 items-center  space-y-6 rounded-md  overflow-hidden bg-white shadow-md ">
+            <div className="flex flex-1 items-center gap-5 space-y-6 overflow-hidden rounded-md bg-white text-black shadow-md md:flex-col">
               <div>
                 <Image src={customer} alt="" />
               </div>
               <div className="py-10 pr-5 md:pl-5">
-                <p className="text-4xl font-medium mb-4">
+                <p className="mb-4 text-4xl font-medium">
                   Customer-Centric Approach
                 </p>
-                <p className="text-l font-normal text-sm">
+                <p className="text-l text-sm font-normal">
                   At Consology, your satisfaction is our top priority. Our
                   commitment includes:
                 </p>
-                <div className="space-y-3 mt-4">
+                <div className="mt-4 space-y-3">
                   <p>
                     <span className="font-medium">Clear Communication:</span> No
                     technical jargon—just straight-forward explanations.
@@ -104,9 +104,9 @@ const ItSupport = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-md overflow-hidden flex-[2] bg-[#0A0F14] text-white">
+          <div className="flex-[2] overflow-hidden rounded-md bg-[#0A0F14] text-white">
             <div className="p-7">
-              <p className="text-5xl font-medium mb-4">
+              <p className="mb-4 text-5xl font-medium">
                 Security and Compliance
               </p>
               <p className="text-l font-normal">
@@ -118,7 +118,7 @@ const ItSupport = () => {
               <Image
                 src={security2}
                 alt=""
-                className="w-full h-full object-contain"
+                className="h-full w-full object-contain"
               />
             </>
           </div>
