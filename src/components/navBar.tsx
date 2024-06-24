@@ -9,7 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 export default function NavBar() {
   return (
     <nav
-      className={`${inter.variable} font-inter flex items-center justify-between bg-black  py-5 px-10 text-white bg-[url('/assets/image 3.png')]`}
+      className={`${inter.variable} font-inter flex items-center justify-between bg-black  py-5 px-10 text-white bg-[url('/assets/image 3.png')] gap-10`}
     >
       <div>
         <Link href={"/"}>

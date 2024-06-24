@@ -1,10 +1,12 @@
-import Hero from "@/components/hero";
 import React from "react";
-import about from "@../../../public/assets/about.png";
-import consult from "@../../../public/assets/consult.svg";
-import reliable from "@../../../public/assets/reliable.svg";
-import focus from "@../../../public/assets/focus.svg";
+import at_about from "../../public/assets/at_about.jpg";
+import consult from "../../public/assets/consult.svg";
+import reliable from "../../public/assets/reliable.svg";
+import focus from "../../public/assets/focus.svg";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import TechnologyVendors from "@/components/technologyVendors";
+import Button from "@/components/button";
 
 const WHY_US_DATA = [
   {
@@ -30,25 +32,38 @@ const WHY_US_DATA = [
 export default function About() {
   return (
     <div>
-      <Hero
-        heading={"Empowering Businesses with Innovative Cloud and IT Solutions"}
-        subHeading={""}
-        heroBg={"/assets/about_bg.png"}
-      />
+      <header
+        className={cn(
+          "p-20 isolate relative space-y-6 bg-cover bg-no-repeat md:px-10"
+        )}
+        style={{
+          backgroundImage: `url(/assets/about_bg.png)`,
+          backgroundSize: "cover",
+        }}
+      >
+        <Button
+          text={"About Us"}
+          className="bg-[#006CFE] rounded-full p-2 text-white font-normal"
+        />
+        <h1 className="font-medium text-8xl text-white w-11/12 2md:text-5xl 2md:w-full">
+          Empowering Businesses with Innovative Cloud and IT Solutions
+        </h1>
+        <TechnologyVendors />
+      </header>
 
-      <div className="flex gap-6 justify-between p-12 ">
+      <section className="flex gap-6 justify-between p-12 md:flex-wrap">
         <div
-          className="p-12 space-y-6"
+          className="p-12 space-y-6 flex-[4] md:flex-auto"
           style={{
             backgroundImage: `url("../assets/about_consology.jpg")`,
             backgroundSize: "cover",
             borderRadius: 20,
           }}
         >
-          <h1 className="font-medium text-8xl">
+          <h1 className="font-medium text-8xl md:text-4xl">
             <span className="text-[#3940AB]">At </span> <span>Consology,</span>
           </h1>
-          <p className="text-2xl">
+          <p className="text-2xl md:text-lg">
             At Consology, we are dedicated to transforming how small and
             medium-sized businesses operate through cutting-edge cloud
             technologies and comprehensive IT support. Our expertise spans
@@ -57,12 +72,14 @@ export default function About() {
             and growth.
           </p>
         </div>
-        <Image src={about} alt="" />
-      </div>
+        <div className="flex-[2] overflow-hidden rounded-lg md:flex-auto md:h-[200px]">
+          <Image src={at_about} alt="" className="h-full object-cover" />
+        </div>
+      </section>
 
       <div className="bg-black p-12 ">
-        <h1 className="font-medium text-8xl mb-4">
-          <span className="text-[#5D5D5D]"> Why</span>
+        <h1 className="font-medium text-8xl mb-4 md:text-4xl">
+          <span className="text-[#5D5D5D]">Why </span>
           <span className="text-white">Choose us?</span>
         </h1>
 
