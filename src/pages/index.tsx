@@ -11,17 +11,18 @@ import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
 import CaseStudies from "@/components/caseStudies";
 import { Testimonials } from "@/components/testimonials";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <Fragment>
-      <header className="relative isolate overflow-hidden bg-cover bg-no-repeat">
-        <div className="absolute inset-0 z-[-2] h-full p-0">
+      <header className="relative isolate overflow-hidden bg-[url('/assets/home_hero_bg.png')] bg-cover bg-no-repeat">
+        {/* <div className="absolute inset-0 z-[-2] h-full p-0">
           <video width="100%" autoPlay muted loop preload="none">
             <source src="/assets/hero-video.mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
+        </div> */}
         <div className="absolute inset-0 z-[-1] bg-black opacity-50"></div>
         <div className="space-y-6 p-20 md:px-10">
           <h1 className="w-10/12 text-balance text-8xl font-medium text-white 2md:w-fit 2md:text-5xl">
@@ -34,7 +35,14 @@ export default function Home() {
             you’re considering cloud migration or need robust I.T. support,
             Consology has you covered.
           </p>
-          <Button text={"Contact us"} />
+
+          <Button
+            asLink
+            text={"Contact us"}
+            className="md:w-full"
+            href="/contact"
+          />
+
           <TechnologyVendors />
         </div>
       </header>

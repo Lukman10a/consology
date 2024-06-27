@@ -10,7 +10,7 @@ export function Testimonials() {
           text={"Archives"}
           className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
         />
-        <h3 className="mb-8 mt-3 w-8/12 text-7xl font-medium md:w-full 2md:mb-8 2md:text-5xl">
+        <h3 className="mb-8 mt-3 w-9/12 text-7xl font-medium md:w-full 2md:mb-8 2md:text-5xl">
           <span className="text-[#BBBBBB]">What our</span>{" "}
           <span>Customers say about </span>{" "}
           <span className="text-[#BBBBBB]">us.</span>

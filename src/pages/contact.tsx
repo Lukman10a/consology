@@ -6,6 +6,8 @@ export default function Contact() {
     <Fragment>
       <section className="p-10">
         <Button
+          asLink
+          href="/contact"
           text={"Contact Us"}
           className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
         />

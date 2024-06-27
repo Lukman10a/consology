@@ -91,9 +91,12 @@ function DesktopNavbar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link className="w-full" href={"/contact"}>
-            <Button text={"Contact us"} />
-          </Link>
+          <Button
+            asLink
+            className="w-full"
+            href={"/contact"}
+            text={"Contact us"}
+          />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

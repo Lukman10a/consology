@@ -40,7 +40,7 @@ export const insightsSubnav = [
 export default function Index() {
   return (
     <nav
-      className={`${inter.variable} bg-[url('/assets/image 3.png')] flex items-center justify-between gap-10 bg-black px-10 py-5 font-inter text-white`}
+      className={`${inter.variable} flex items-center justify-between gap-10 bg-[black] bg-opacity-90 px-10 py-5 font-inter text-white`}
     >
       <div>
         <Link href={"/"}>
