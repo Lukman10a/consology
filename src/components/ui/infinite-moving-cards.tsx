@@ -101,14 +101,14 @@ export const InfiniteMovingCards = ({
               <p className="relative z-20 my-5 text-sm font-normal leading-[1.6]">
                 {item.quote}
               </p>
-              <p className="relative z-20 flex items-center gap-3">
+              <div className="relative z-20 flex items-center gap-3">
                 <div className="w-6">
                   <Image src={teams} alt="Teams" className="h-auto w-full" />
                 </div>
                 <span className="font text-sm font-normal leading-[1.6] text-black">
                   {item.title}
                 </span>
-              </p>
+              </div>
             </blockquote>
           </li>
         ))}

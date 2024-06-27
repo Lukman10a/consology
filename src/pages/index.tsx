@@ -125,7 +125,7 @@ export default function Home() {
               <div className="bg-fill h-[300px] w-full bg-[url('/assets/service-tailored.png')] bg-center bg-no-repeat"></div>
             </article>
             <article className="flex-1 rounded-lg border border-[#0000001F] bg-[#F9F9F9] pb-10 pl-10">
-              <div className="h-[300px] w-full bg-[url('/assets/service-infra.png')] bg-cover bg-center bg-no-repeat"></div>
+              <div className="h-[300px] w-full bg-[url('/assets/service-infra.png')] bg-cover bg-center bg-no-repeat md:bg-contain"></div>
               <div className="space-y-3 pr-10">
                 <p className="text-5xl font-medium md:text-xl 2md:text-2xl">
                   <span className="text-[#BBBBBB]">End User to</span>{" "}
