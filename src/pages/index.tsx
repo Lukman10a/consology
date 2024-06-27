@@ -10,6 +10,7 @@ import chat2 from "../../public/assets/chat2.png";
 import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
 import CaseStudies from "@/components/caseStudies";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -116,38 +117,42 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <section className="flex items-center gap-10 bg-[url('/assets/experience.jpg')] bg-cover bg-center bg-no-repeat p-10 text-white md:flex-wrap">
-        <h3 className="text-7xl md:text-4xl">
-          Our experience spans across various sectors
-        </h3>
-        <div>
-          <div className="mb-5 flex items-center justify-between gap-8 rounded-lg bg-[#3E3E3E73] p-6 md:p-4">
-            <div className="flex flex-col items-center gap-2">
-              <div className="rounded-lg bg-[#FFFFFF17] p-2">
-                <FaShop size={24} color="#00ADEF" />
+      <section className="isloate relative gap-10 bg-[url('/assets/experience.jpg')] bg-cover bg-center bg-no-repeat p-10">
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="relative z-[1] flex items-center gap-5 text-white md:flex-wrap">
+          <h3 className="text-7xl md:text-4xl">
+            Our experience spans across various sectors
+          </h3>
+          <div>
+            <div className="mb-5 flex items-center justify-between gap-8 rounded-lg bg-[#3E3E3E73] p-6 md:p-4">
+              <div className="flex flex-col items-center gap-2">
+                <div className="rounded-lg bg-[#FFFFFF17] p-2">
+                  <FaShop size={24} color="#00ADEF" />
+                </div>
+                <p className="md:text-sm">Retail</p>
               </div>
-              <p className="md:text-sm">Retail</p>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="rounded-lg bg-[#FFFFFF17] p-2">
-                <FaBed size={24} color="#91C0FF" />
+              <div className="flex flex-col items-center gap-2">
+                <div className="rounded-lg bg-[#FFFFFF17] p-2">
+                  <FaBed size={24} color="#91C0FF" />
+                </div>
+                <p className="md:text-sm">Hospitality</p>
               </div>
-              <p className="md:text-sm">Hospitality</p>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="rounded-lg bg-[#FFFFFF17] p-2">
-                <RiPoliceBadgeFill size={24} color="#FBBC09" />
+              <div className="flex flex-col items-center gap-2">
+                <div className="rounded-lg bg-[#FFFFFF17] p-2">
+                  <RiPoliceBadgeFill size={24} color="#FBBC09" />
+                </div>
+                <p className="md:text-sm">Law enforcement</p>
               </div>
-              <p className="md:text-sm">Law enforcement</p>
             </div>
+            <p>
+              Including retail, hospitality, law enforcement, and more. We
+              understand your industry-specific challenges and deliver
+              targeted solutions.
+            </p>
           </div>
-          <p>
-            Including retail, hospitality, law enforcement, and more. We
-            understand your industry-specific challenges and deliver
-            targeted solutions.
-          </p>
         </div>
       </section>
+      <Testimonials />
       <CaseStudies />
     </Fragment>
   );
