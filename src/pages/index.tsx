@@ -5,13 +5,55 @@ import { FaShop } from "react-icons/fa6";
 import { RiPoliceBadgeFill } from "react-icons/ri";
 
 import help_desk from "../../public/assets/help-desk.png";
+import analyse from "../../public/assets/analyse.png";
+import design from "../../public/assets/design.png";
+import build from "../../public/assets/build.jpg";
+import testing from "../../public/assets/testing.png";
 import chat from "../../public/assets/chat.png";
 import chat2 from "../../public/assets/chat2.png";
 import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
 import CaseStudies from "@/components/caseStudies";
 import { Testimonials } from "@/components/testimonials";
-import Link from "next/link";
+
+const steps = [
+  {
+    step: "Step 1",
+    bgColor: "bg-black",
+    title: "Analyse",
+    description:
+      "Examine the current situation and identify the benefits and drawbacks of the current systems and processes.",
+    imgSrc: analyse,
+    imgAlt: "analyse",
+  },
+  {
+    step: "Step 2",
+    bgColor: "bg-[#FEA02A]",
+    title: "Design",
+    description:
+      "Devise proposed frameworks and methodologies that can streamline your business goals.",
+    imgSrc: design,
+    imgAlt: "design",
+  },
+  {
+    step: "Step 3",
+    bgColor: "bg-[#57A0E5]",
+    title: "Build",
+    description:
+      "Develop and implement the suggested framework and ascertain the need for use case testing.",
+    imgSrc: build,
+    imgAlt: "build",
+  },
+  {
+    step: "Step 4",
+    bgColor: "bg-black",
+    title: "Testing",
+    description:
+      "Address any issues, apply needed adjustments, perform user testing, and train both Power Users and Administrators.",
+    imgSrc: testing,
+    imgAlt: "testing",
+  },
+];
 
 export default function Home() {
   return (
@@ -157,6 +199,64 @@ export default function Home() {
               understand your industry-specific challenges and deliver
               targeted solutions.
             </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="px-14 py-12 2md:px-8">
+          <Button
+            text={"Cloud Technology"}
+            className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
+          />
+          <h3 className="mb-8 mt-3 text-7xl font-medium md:w-full 2md:mb-8 2md:text-4xl">
+            <span className="text-[#BBBBBB]">Unlock the</span>{" "}
+            <span>Complete power</span>{" "}
+            <span className="text-[#BBBBBB]">of Cloud </span>
+            <span>Technology </span>
+            <span className="text-[#BBBBBB]">and </span>
+            <span>Elevate your Business </span>
+            <span className="text-[#BBBBBB]"> to new levels of </span>
+            <span> success.</span>
+          </h3>
+          <Button
+            text={"Get Started"}
+            className="rounded-md bg-black p-2 px-4 font-normal text-white"
+          />
+        </div>
+        <div className="ml-14 rounded-s-3xl bg-[url('/assets/strategyBg.png')] bg-cover pb-4 md:ml-0 md:rounded-s-none">
+          <div className="px-14 py-12 2md:px-8">
+            <Button
+              text={"How we work"}
+              className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
+            />
+            <h3 className="mb-8 mt-3 text-7xl font-medium text-white md:w-full 2md:mb-8 2md:text-5xl">
+              Our Strategies
+            </h3>
+          </div>
+          <div className="grid grid-cols-responsive250 gap-4 px-14 md:px-8">
+            {steps.map((step, index) => (
+              <article
+                key={index}
+                className="flex flex-col justify-between gap-4 rounded-2xl bg-white p-6"
+              >
+                <div className="space-y-3">
+                  <Button
+                    text={step.step}
+                    className={`w-fit rounded-full px-2 py-1 font-normal text-white ${step.bgColor}`}
+                  />
+                  <p className="text-2xl font-medium">{step.title}</p>
+                </div>
+
+                <p className="text-[#737373]">{step.description}</p>
+                <div className="relative max-h-[200px] flex-1 self-end overflow-hidden rounded-2xl">
+                  <Image
+                    src={step.imgSrc}
+                    alt={step.imgAlt}
+                    className="h-full object-cover"
+                  />
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
