@@ -86,7 +86,7 @@ export default function Career({
         <div className="bg-[#F7F7F7] p-20">
           <h1 className="text-center text-7xl font-medium">Open positions</h1>
 
-          <div className="my-8 grid grid-cols-5 rounded-md bg-white p-5 text-lg">
+          <div className="my-8 grid grid-cols-5 rounded-md p-5 text-lg">
             <p className="col-span-2">Position</p>
             <p>Department</p>
             <p>Commitment</p>
@@ -96,7 +96,7 @@ export default function Career({
           {JOBPOSITIONS.map((job, index) => (
             <div
               key={index}
-              className="my-8 grid grid-cols-5 rounded-md bg-white p-5 text-lg"
+              className="my-8 grid cursor-pointer grid-cols-5 rounded-md p-5 text-lg transition duration-300 ease-in-out hover:bg-white hover:shadow-md"
             >
               <p className="col-span-2">{job.position}</p>
               <p>{job.department}</p>
