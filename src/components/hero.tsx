@@ -41,12 +41,14 @@ export default function Hero({
           {subHeading}
         </p>
       )}
-      <Link href={ctaHref} className="mt-6 inline-block">
-        <Button
-          text={ctaText}
-          className="rounded-md bg-white p-2 font-semibold"
-        />
-      </Link>
+
+      <Button
+        asLink
+        text={ctaText}
+        href={ctaHref}
+        className="mt-6 inline-block rounded-md bg-white p-2 font-semibold"
+      />
+
       <TechnologyVendors />
     </header>
   );

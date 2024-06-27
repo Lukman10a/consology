@@ -13,13 +13,13 @@ export default function CaseStudies({
   return (
     <div className="bg-black p-12 md:px-8">
       {isDetailsPage === false && (
-        <div className="text-center mb-6">
+        <div className="mb-6 text-center">
           <Button
             text={"Our works"}
-            className="bg-[#006CFE] rounded-full p-2 text-white font-normal"
+            className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
           />
 
-          <h1 className="font-extrabold text-8xl md:text-5xl mt-3">
+          <h1 className="mt-3 text-8xl font-extrabold md:text-5xl">
             <span className="text-white">CASE </span>
             <span className="text-[#5D5D5D]">STUDIES.</span>
           </h1>
@@ -32,12 +32,14 @@ export default function CaseStudies({
       </div>
 
       {isDetailsPage === false && (
-        <Link
-          href="/case-studies"
-          className="flex justify-center mt-6 mb-12 font-semibold"
-        >
-          <Button text="View more" className="bg-white px-4 py-2 rounded-xl" />
-        </Link>
+        <div className="mb-12 mt-6 flex justify-center font-semibold">
+          <Button
+            asLink
+            href="/case-studies"
+            text="View more"
+            className="rounded-xl bg-white px-4 py-2"
+          />
+        </div>
       )}
     </div>
   );

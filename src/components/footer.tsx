@@ -9,9 +9,9 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer
-      className={`${inter.variable} font-inter flex justify-between bg-black gap-11 py-10 px-10 text-white bg-[url('/assets/image 3.png')] md:flex-col`}
+      className={`${inter.variable} bg-[url('/assets/image 3.png')] flex justify-between gap-11 bg-black px-10 py-10 font-inter text-white md:flex-col`}
     >
-      <div className="space-y-4 flex-1">
+      <div className="flex-1 space-y-4">
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
@@ -25,7 +25,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="flex gap-10 flex-1 justify-center md:flex-wrap md:justify-start">
+      <div className="flex flex-1 justify-center gap-10 md:flex-wrap md:justify-start">
         <div className="font-medium">
           <p className="mb-3 text-sm text-[#645D5D]">Company</p>
           <ul className="space-y-3">
@@ -36,7 +36,7 @@ export default function Footer() {
               <Link href={"/"}>Blog</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
-              <Link href={"/careers"}>Career</Link>
+              <Link href={"/career"}>Career</Link>
             </li>
           </ul>
         </div>
@@ -55,7 +55,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex gap-5 flex-1 justify-end md:justify-start">
+      <div className="flex flex-1 justify-end gap-5 md:justify-start">
         <Link target="_blank" href="https://www.linkedin.com/company/consolgy/">
           <FaLinkedin size={24} />
         </Link>
