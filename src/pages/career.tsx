@@ -226,7 +226,7 @@ export default function Career({
               {PROCESS.map((process, index) => (
                 <div className="flex items-center justify-between space-y-10 border-b-2 p-2">
                   <div
-                    key={index}
+                    key={process.title}
                     className="flex items-center gap-2 text-lg font-medium"
                   >
                     <p>{index + 1}.</p>
