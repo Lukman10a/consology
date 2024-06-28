@@ -4,6 +4,11 @@ import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import career from "../../public/assets/career.png";
+import book from "../../public/assets/book.svg";
+import coach from "../../public/assets/coach.svg";
+import weight from "../../public/assets/weight.svg";
+import kind from "../../public/assets/kind.svg";
+import play from "../../public/assets/play.svg";
 import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 
@@ -46,6 +51,68 @@ export default function Career({
       title: "Valuable feedback",
     },
   ];
+
+  const CARDS = [
+    {
+      id: 1,
+      backgroundImage: "/assets/book_bg.png",
+      imageSrc: book,
+      title: "An open book",
+      descriptions: [
+        "We are open as a team and as a product.",
+        "We don’t put walls up unless it’s necessary.",
+        "We become better when we share information.",
+        "We are open to diversity of opinion, backgrounds, and thought.",
+      ],
+    },
+    {
+      id: 2,
+      backgroundImage: "/assets/play_bg.png",
+      imageSrc: play,
+      title: "Play as a team",
+      descriptions: [
+        "We play because we’re a creator tool.",
+        "Life is short. Let's build something meaningful.",
+        "We play as a team because great teams build great things together.",
+        "We keep those standards high.",
+      ],
+    },
+    {
+      id: 3,
+      backgroundImage: "/assets/coach_bg.png",
+      imageSrc: coach,
+      title: "Be a coach",
+      descriptions: [
+        "We want the best for our customers and ourselves.",
+        "We coach people to their best potential.",
+        "That's why an 'Arcader' is both a teammate and a customer.",
+      ],
+    },
+    {
+      id: 4,
+      backgroundImage: "/assets/weight_bg.png",
+      imageSrc: weight,
+      title: "Carry the weight",
+      descriptions: [
+        "We act like owners.",
+        "Let’s empower each other.",
+        "If we see something that needs change, we lead through it.",
+      ],
+    },
+    {
+      id: 4,
+      backgroundImage: "/assets/kind_bg.png",
+      imageSrc: kind,
+      title: "Be kind",
+      descriptions: [
+        "        We can be honest and kind.",
+        " We can have high standards and be kind.",
+        " We can say no and be kind.",
+        " Kindness can vary across cultures, upbringings and languages - but we try our best to be kind.",
+      ],
+    },
+  ];
+
   return (
     <section>
       <header
@@ -97,8 +164,31 @@ export default function Career({
         <Image src={career} alt="" />
       </div>
 
+      <div className="grid grid-cols-2 gap-10 p-24 px-36">
+        {CARDS.map((card) => (
+          <div
+            key={card.id}
+            className="space-y-2 rounded-2xl p-4"
+            style={{
+              backgroundImage: `url(${card.backgroundImage})`,
+              backgroundSize: "cover",
+            }}
+          >
+            <Image src={card.imageSrc} alt="" className="py-4" />
+            <div className="space-y-2 text-xl">
+              <h3 className="text-4xl font-semibold">{card.title}</h3>
+              {card.descriptions.map((description, index) => (
+                <p key={index} className="border-b-2 py-3">
+                  {description}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <div>
-        <div className="bg-[#F7F7F7] p-24">
+        <div className="bg-[#F7F7F7] p-24 px-36">
           <h1 className="text-center text-7xl font-medium">Open positions</h1>
 
           <div className="my-8 grid grid-cols-5 rounded-md p-5 text-lg">
