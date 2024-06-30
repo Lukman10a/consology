@@ -100,7 +100,7 @@ export default function Career({
       ],
     },
     {
-      id: 4,
+      id: 5,
       backgroundImage: "/assets/kind_bg.png",
       imageSrc: kind,
       title: "Be kind",
@@ -116,7 +116,7 @@ export default function Career({
   return (
     <section>
       <header
-        className="flex flex-col items-center justify-center p-20"
+        className="flex flex-col items-center justify-center p-20 md:px-10"
         style={{
           backgroundImage: `url("/assets/career_bg.png")`,
           backgroundSize: "cover",
@@ -165,6 +165,10 @@ export default function Career({
       </div>
 
       <div className="grid grid-cols-2 gap-10 p-24 px-36">
+        <div>
+          <h1 className="text-7xl font-medium">Our Values</h1>
+          <p className="text-2xl">What we love and stand for every day</p>
+        </div>
         {CARDS.map((card) => (
           <div
             key={card.id}
