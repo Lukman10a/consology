@@ -224,11 +224,11 @@ export default function Career({
             </div>
             <div>
               {PROCESS.map((process, index) => (
-                <div className="flex items-center justify-between space-y-10 border-b-2 p-2">
-                  <div
-                    key={process.title}
-                    className="flex items-center gap-2 text-lg font-medium"
-                  >
+                <div
+                  className="flex items-center justify-between space-y-10 border-b-2 p-2"
+                  key={process.title}
+                >
+                  <div className="flex items-center gap-2 text-lg font-medium">
                     <p>{index + 1}.</p>
                     <p>{process.title}</p>
                   </div>
