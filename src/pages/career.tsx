@@ -116,7 +116,7 @@ export default function Career({
   return (
     <section>
       <header
-        className="flex flex-col items-center justify-center p-20 md:px-10"
+        className="flex flex-col items-center justify-center p-20"
         style={{
           backgroundImage: `url("/assets/career_bg.png")`,
           backgroundSize: "cover",
@@ -193,9 +193,9 @@ export default function Career({
 
       <div>
         <div className="bg-[#F7F7F7] p-24 px-36">
-          <h1 className="text-center text-7xl font-medium">Open positions</h1>
+          {/* <h1 className="text-center text-7xl font-medium">Open positions</h1> */}
 
-          <div className="my-8 grid grid-cols-5 rounded-md p-5 text-lg">
+          {/* <div className="my-8 grid grid-cols-5 rounded-md p-5 text-lg">
             <p className="col-span-2">Position</p>
             <p>Department</p>
             <p>Commitment</p>
@@ -212,7 +212,7 @@ export default function Career({
               <p>{job.commitment}</p>
               <p>{job.location}</p>
             </div>
-          ))}
+          ))} */}
           <div className="grid grid-cols-2 gap-14">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Your application process</h2>
