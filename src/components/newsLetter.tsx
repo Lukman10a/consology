@@ -9,7 +9,7 @@ export default function NewsLetter() {
         <h1 className="text-7xl font-medium md:text-4xl">
           <span className="text-[#BBBBBB]"> Subscribe to our </span>
           <br />
-          <span> Newsletter.</span>
+          <span>Newsletter.</span>
         </h1>
         <p className="md:text-sm">
           Don&apos;t miss out on the latest updates, exclusive offers, and
@@ -27,7 +27,7 @@ export default function NewsLetter() {
           />
         </div>
       </div>
-      <Image src={mailbox} alt="" width={700} />
+      <Image src={mailbox} alt="" width={700} className="" />
     </div>
   );
 }

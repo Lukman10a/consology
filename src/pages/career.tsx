@@ -12,16 +12,7 @@ import play from "../../public/assets/play.svg";
 import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 
-export default function Career({
-  containerClass,
-  ctaHref = "/contact",
-  ctaText = "Contact us",
-}: {
-  containerClass?: string;
-  ctaHref?: string;
-  ctaText?: string;
-  hasBg?: boolean;
-}) {
+export default function Career() {
   const JOBPOSITIONS = [
     {
       position: "Site Reliability Engineer",
@@ -122,25 +113,23 @@ export default function Career({
           backgroundSize: "cover",
         }}
       >
-        <h1 className="text-center text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
+        <h1 className="text-center text-8xl font-medium text-white 2md:text-5xl">
           <span>Work at</span> <span className="text-[#FFE59C]">CONSOLOGY</span>{" "}
           <span>Work in the Great Beyond</span>
         </h1>
-
-        <div className="mt-6 flex items-center gap-2">
-          <div className="">
+        <div className="mt-6 flex w-full items-center justify-center gap-2">
+          <div className="w-8/12">
             <input
               type="text"
               placeholder="Search..."
-              className="rounded-xl border-2 border-white p-2 px-20 opacity-25"
+              className="w-full rounded-xl border-2 border-white bg-transparent p-2 pl-6 placeholder:text-white"
             />
           </div>
           <div>
             <FaSearch size={30} color="white" />
           </div>
         </div>
-
-        <Link href={ctaHref} className="mt-6 inline-block">
+        <Link href={"/contact"} className="mt-6 inline-block">
           <Button
             text={"View all available jobs"}
             className="rounded-md bg-white p-2 px-4 font-semibold"
