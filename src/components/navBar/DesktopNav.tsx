@@ -22,9 +22,9 @@ function DesktopNavbar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent p-0 text-white hover:bg-transparent hover:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent">
+          {/* <NavigationMenuTrigger className="bg-transparent p-0 text-white hover:bg-transparent hover:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent">
             Services
-          </NavigationMenuTrigger>
+          </NavigationMenuTrigger> */}
           <NavigationMenuContent>
             <ul className="p-2">
               {servicesSubnav.map((services) => (
@@ -83,6 +83,7 @@ function DesktopNavbar() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+
         <NavigationMenuItem>
           <Link href="/career" legacyBehavior passHref>
             <NavigationMenuLink className="text-white">

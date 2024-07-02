@@ -223,7 +223,7 @@ export default function Home() {
             className="rounded-md bg-black p-2 px-4 font-normal text-white"
           />
         </div>
-        <div className="ml-14 rounded-s-3xl bg-[url('/assets/strategyBg.png')] bg-cover pb-4 md:ml-0 md:rounded-s-none">
+        {/* <div className="ml-14 rounded-s-3xl bg-[url('/assets/strategyBg.png')] bg-cover pb-4 md:ml-0 md:rounded-s-none">
           <div className="px-14 py-12 2md:px-8">
             <Button
               text={"How we work"}
@@ -258,7 +258,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
       <Testimonials />
       <CaseStudies />
