@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="px-14 py-12 2md:px-8">
+        {/* <div className="px-14 py-12 2md:px-8">
           <Button
             text={"Cloud Technology"}
             className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
@@ -222,7 +222,7 @@ export default function Home() {
             text={"Get Started"}
             className="rounded-md bg-black p-2 px-4 font-normal text-white"
           />
-        </div>
+        </div> */}
         {/* <div className="ml-14 rounded-s-3xl bg-[url('/assets/strategyBg.png')] bg-cover pb-4 md:ml-0 md:rounded-s-none">
           <div className="px-14 py-12 2md:px-8">
             <Button

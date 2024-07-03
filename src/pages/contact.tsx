@@ -66,7 +66,7 @@ export default function Contact() {
               <label htmlFor="" className="mb-4 block">
                 <p className="mb-2 text-sm font-semibold">Email</p>
                 <input
-                  type="text"
+                  type="email"
                   className="w-full rounded-lg border border-gray-400 p-3"
                 />
               </label>
@@ -74,7 +74,6 @@ export default function Contact() {
                 <p className="mb-2 text-sm font-semibold">
                   How can we help you
                 </p>
-
                 <textarea
                   name=""
                   id=""
