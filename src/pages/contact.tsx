@@ -30,20 +30,14 @@ export default function Contact() {
     setIsFormValid(isFormValid);
 
     setValidationErrors({
-      from_name:
-        from_name.trim() === ""
-          ? ""
-          : from_name.trim() === ""
-            ? "Name is required"
-            : "",
+      from_name: from_name.trim() === "" ? "Name is required" : "",
       user_email:
-        user_email === "" ? "" : !isEmailValid ? "Invalid email format" : "",
-      message:
-        message.trim() === ""
-          ? ""
-          : message.trim() === ""
-            ? "Message is required"
+        user_email === ""
+          ? "Email is required"
+          : !isEmailValid
+            ? "Invalid email format"
             : "",
+      message: message.trim() === "" ? "Message is required" : "",
     });
   }, [formData]);
 
@@ -84,14 +78,16 @@ export default function Contact() {
             className: "w-fit",
             duration: 3000,
           });
+        } else {
+          throw new Error(result.text);
         }
-      } catch (error) {
-        console.log({ error });
+      } catch (error: any) {
+        console.error("Error sending email:", error);
         toast({
           variant: "destructive",
           className: "w-fit",
           title: "An error occurred while sending the email",
-          description: `${error?.text}`,
+          description: `${error.message || "Unknown error"}`,
           duration: 3000,
         });
         setError("An error occurred while sending the email");

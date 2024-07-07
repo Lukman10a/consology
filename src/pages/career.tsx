@@ -96,7 +96,7 @@ export default function Career() {
       imageSrc: kind,
       title: "Be kind",
       descriptions: [
-        "        We can be honest and kind.",
+        " We can be honest and kind.",
         " We can have high standards and be kind.",
         " We can say no and be kind.",
         " Kindness can vary across cultures, upbringings and languages - but we try our best to be kind.",
@@ -138,11 +138,11 @@ export default function Career() {
       </header>
 
       <div>
-        <div className="grid grid-cols-2 place-items-start p-20">
-          <h1 className="text-7xl font-medium">
+        <div className="grid grid-cols-2 place-items-start p-20 sm:grid-cols-1 md:gap-4">
+          <h1 className="text-7xl font-medium md:text-7xl">
             We are a diverse team of people
           </h1>
-          <p className="text-xl">
+          <p className="text-xl sm:text-2xl">
             At the heart of our organization is a vibrant, multicultural team
             united by a shared passion for innovation and excellence. Our
             collective backgrounds, experiences, and perspectives shape a
@@ -150,10 +150,10 @@ export default function Career() {
             celebrated.
           </p>
         </div>
-        <Image src={career} alt="" />
+        <Image src={career} alt="" className="md:hidden" />
       </div>
 
-      <div className="grid grid-cols-2 gap-10 p-24 px-36">
+      <div className="grid grid-cols-2 gap-10 p-24 px-36 md:grid-cols-1 md:px-4">
         <div>
           <h1 className="text-7xl font-medium">Our Values</h1>
           <p className="text-2xl">What we love and stand for every day</p>
@@ -181,7 +181,7 @@ export default function Career() {
       </div>
 
       <div>
-        <div className="bg-[#F7F7F7] p-24 px-36">
+        <div className="bg-[#F7F7F7] p-24 px-36 md:px-4">
           {/* <h1 className="text-center text-7xl font-medium">Open positions</h1> */}
 
           {/* <div className="my-8 grid grid-cols-5 rounded-md p-5 text-lg">
@@ -202,7 +202,7 @@ export default function Career() {
               <p>{job.location}</p>
             </div>
           ))} */}
-          <div className="grid grid-cols-2 gap-14">
+          <div className="grid grid-cols-2 gap-14 md:grid-cols-1">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Your application process</h2>
               <p>

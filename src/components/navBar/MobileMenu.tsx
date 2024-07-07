@@ -56,6 +56,11 @@ export function MobileMenu() {
               Consultancy
             </Link>
           </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/career" legacyBehavior passHref>
+              Career
+            </Link>
+          </DropdownMenuItem>
           {/* <DropdownMenuSub>
             <DropdownMenuSubTrigger>Our Services</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
