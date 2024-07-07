@@ -138,8 +138,8 @@ export default function Career() {
       </header>
 
       <div>
-        <div className="grid grid-cols-2 place-items-start p-20 sm:grid-cols-1 md:gap-4">
-          <h1 className="text-7xl font-medium md:text-7xl">
+        <div className="grid grid-cols-2 place-items-start p-20 md:grid-cols-1 md:gap-8 md:p-8">
+          <h1 className="text-7xl font-medium md:text-5xl">
             We are a diverse team of people
           </h1>
           <p className="text-xl sm:text-2xl">
