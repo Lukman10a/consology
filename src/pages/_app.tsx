@@ -34,6 +34,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="description"
+          content="Consology – Consulting On Technology, Cloud, I.T Support, 1st Line, 2nd Line, 3rd Line, Microsoft, Teams, OneDrive,Sharepoint, OneDrive for Business, Viva, Exchange, Exchange Online"
+          key="description"
+        />
         <title>Consology</title>
       </Head>
       <NavBar />
