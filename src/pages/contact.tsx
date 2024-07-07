@@ -1,18 +1,111 @@
 import Button from "@/components/button";
-import React, { Fragment } from "react";
-import contactbg from "../../public/assets/contactbg.jpg";
-import Image from "next/image";
+import { useToast } from "@/components/ui/use-toast";
+import React, { FormEvent, Fragment, useEffect, useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdWifiCalling3, MdMessage } from "react-icons/md";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [isFormValid, setIsFormValid] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    from_name: "",
+    user_email: "",
+    message: "",
+  });
+  const [validationErrors, setValidationErrors] = useState({
+    from_name: "",
+    user_email: "",
+    message: "",
+  });
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const { from_name, user_email, message } = formData;
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user_email);
+    const isFormValid =
+      from_name.trim() !== "" && isEmailValid && message.trim() !== "";
+    setIsFormValid(isFormValid);
+
+    setValidationErrors({
+      from_name:
+        from_name.trim() === ""
+          ? ""
+          : from_name.trim() === ""
+            ? "Name is required"
+            : "",
+      user_email:
+        user_email === "" ? "" : !isEmailValid ? "Invalid email format" : "",
+      message:
+        message.trim() === ""
+          ? ""
+          : message.trim() === ""
+            ? "Message is required"
+            : "",
+    });
+  }, [formData]);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    if (formRef.current) {
+      try {
+        const result = await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+          formRef.current,
+          process.env.NEXT_PUBLIC_EMAIL_KEY as string,
+        );
+
+        if (result.text === "OK" && formRef.current) {
+          formRef.current.reset();
+          setFormData({
+            from_name: "",
+            user_email: "",
+            message: "",
+          });
+          toast({
+            title: "Successful",
+            description: `Message Sent: ${result.text}`,
+            className: "w-fit",
+            duration: 3000,
+          });
+        }
+      } catch (error) {
+        console.log({ error });
+        toast({
+          variant: "destructive",
+          className: "w-fit",
+          title: "An error occurred while sending the email",
+          description: `${error?.text}`,
+          duration: 3000,
+        });
+        setError("An error occurred while sending the email");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+  };
+
   return (
     <Fragment>
       <section className="relative isolate text-white">
         <div className="absolute inset-0 z-[-1] flex flex-col">
-          <div className="h-1/2 w-full overflow-hidden bg-[url(/assets/contactbg.jpg)] bg-cover">
-            {/* <Image src={contactbg} alt="contactbg" /> */}
-          </div>
+          <div className="h-1/2 w-full overflow-hidden bg-[url(/assets/contactbg.jpg)] bg-cover"></div>
           <div className="h-1/2 bg-black"></div>
         </div>
         <div className="flex justify-between gap-7 px-16 py-10 md:flex-wrap md:px-8 md:py-8">
@@ -37,58 +130,85 @@ export default function Contact() {
                 <li className="flex items-center gap-3">
                   <FaLocationDot color="#006CFE" />
                   <span>
-                    1055 Arthur ave Elk Groot, 67. New Palmas South Carolina.
+                    Unit C22 Imex Business Park, Kings Road. Tyseley, BIRMINGHAM
+                    B11 2AL.
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <MdWifiCalling3 color="#006CFE" />{" "}
-                  <span>+1 234 678 9108 99</span>
+                  <MdWifiCalling3 color="#006CFE" /> <span>+447306129479</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MdMessage color="#006CFE" />
-                  <span>Contact@moralizer.com</span>
+                  <span>info@consology.co.uk</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="shadown-lg rounded-lg bg-white p-5 text-black md:w-full">
+
+          <div className="rounded-lg bg-white p-5 text-black shadow-lg md:w-full">
             <h3 className="mb-5 text-2xl font-medium">
-              Fill out the form and we will be touch!
+              Fill out the form and we will be in touch!
             </h3>
-            <div className="space-y-4">
-              <label htmlFor="" className="mb-4 block">
-                <p className="mb-2 text-sm font-semibold">Name</p>
-                <input
-                  type="text"
-                  className="w-full rounded-lg border border-gray-400 p-3"
-                />
-              </label>
-              <label htmlFor="" className="mb-4 block">
-                <p className="mb-2 text-sm font-semibold">Email</p>
-                <input
-                  type="email"
-                  className="w-full rounded-lg border border-gray-400 p-3"
-                />
-              </label>
-              <label htmlFor="" className="mb-4 block">
-                <p className="mb-2 text-sm font-semibold">
-                  How can we help you
-                </p>
-                <textarea
-                  name=""
-                  id=""
-                  cols={30}
-                  rows={10}
-                  className="w-full rounded-lg border border-gray-400 p-3"
-                ></textarea>
-              </label>
-            </div>
-            <Button
-              asLink
-              href="/contact"
-              text={"Send"}
-              className="mt-5 w-full rounded-lg bg-black p-2 font-normal text-white"
-            />
+            <form ref={formRef} onSubmit={sendEmail}>
+              <div className="space-y-4">
+                <label htmlFor="from_name" className="mb-4 block">
+                  <p className="mb-2 text-sm font-semibold">Name</p>
+                  <input
+                    type="text"
+                    name="from_name"
+                    value={formData.from_name}
+                    onChange={handleInputChange}
+                    className="w-full rounded-lg border border-gray-400 p-3"
+                  />
+                  {validationErrors.from_name && (
+                    <p className="text-sm text-red-500">
+                      {validationErrors.from_name}
+                    </p>
+                  )}
+                </label>
+                <label htmlFor="user_email" className="mb-4 block">
+                  <p className="mb-2 text-sm font-semibold">Email</p>
+                  <input
+                    type="email"
+                    name="user_email"
+                    value={formData.user_email}
+                    onChange={handleInputChange}
+                    className="w-full rounded-lg border border-gray-400 p-3"
+                  />
+                  {validationErrors.user_email && (
+                    <p className="text-sm text-red-500">
+                      {validationErrors.user_email}
+                    </p>
+                  )}
+                </label>
+                <label htmlFor="message" className="mb-4 block">
+                  <p className="mb-2 text-sm font-semibold">
+                    How can we help you
+                  </p>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    cols={30}
+                    rows={10}
+                    className="w-full rounded-lg border border-gray-400 p-3"
+                  ></textarea>
+                  {validationErrors.message && (
+                    <p className="text-sm text-red-500">
+                      {validationErrors.message}
+                    </p>
+                  )}
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="mt-5 w-full rounded-lg bg-black p-2 font-normal text-white disabled:cursor-not-allowed disabled:bg-gray-400"
+                disabled={isLoading || !isFormValid}
+              >
+                {isLoading ? "Sending..." : "Send"}
+              </button>
+              {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
+            </form>
           </div>
         </div>
       </section>
