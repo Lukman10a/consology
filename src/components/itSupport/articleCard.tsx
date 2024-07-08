@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
+import infra1 from "../../../public/assets/customer.png";
+import Link from "next/link";
 
 interface ArticleCardProps {
   title: string;
@@ -9,6 +11,7 @@ interface ArticleCardProps {
   image: StaticImageData | string;
   bgImage: string;
   reverse?: boolean;
+  sideImageClassName?: string;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -18,6 +21,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   bgImage,
   reverse,
   className,
+  sideImageClassName,
 }) => {
   return (
     <article
@@ -28,7 +32,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
     >
       <div
         className={cn(
-          `h-fit flex-[3] space-y-6 overflow-hidden rounded-md bg-cover bg-no-repeat p-8 text-white`,
+          `flex flex-[3] flex-col items-start justify-center space-y-6 overflow-hidden rounded-md bg-cover bg-no-repeat p-8 text-white`,
           className,
         )}
         style={{
@@ -42,16 +46,17 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         ) : (
           description
         )}
-        <button className="text-xl underline">Get started</button>
+        <Link href={"/contact"} className="text-xl underline">
+          Get started
+        </Link>
       </div>
       <div
-        className="flex-[2] overflow-hidden rounded-md bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundSize: "cover",
-        }}
+        className={cn(
+          "flex-[2] overflow-hidden rounded-md bg-center bg-no-repeat",
+          sideImageClassName,
+        )}
       >
-        {/* <Image src={image} alt="" className="h-fit object-cover" /> */}
+        <Image src={image} alt="" className="h-fit object-cover" />
       </div>
     </article>
   );

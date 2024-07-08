@@ -28,13 +28,13 @@ const ItSupport = () => {
         <ArticleCard
           title="End User Support"
           description="We provide responsive help desk services to assist your employees with any technical issues they encounter. From software troubleshooting to hardware setup, our team ensures your end users stay productive."
-          image={"/assets/support-2.png"}
+          image={support2}
           bgImage="/assets/support-1.jpg"
         />
         <ArticleCard
           title="Infrastructure Management"
           description="Our experts oversee your entire infrastructure, including servers, networks, and cloud services. We optimize performance, monitor security, and handle maintenance tasks proactively."
-          image={"/assets/infra-1.png"}
+          image={infra1}
           bgImage="/assets/infra-2.jpg"
           reverse
         />
@@ -62,7 +62,7 @@ const ItSupport = () => {
         <ArticleCard
           title="Backup and Disaster Recovery"
           description=" We design reliable backup solutions to safeguard your critical data. In case of emergencies, our disaster recovery plans minimize downtime and data loss."
-          image={"/assets/backup.jpg"}
+          image={backup}
           bgImage="/assets/backupbg.jpg"
           className="text-black"
           reverse
@@ -72,21 +72,18 @@ const ItSupport = () => {
           description={
             "Protecting your data is paramount. We implement robust security measures and ensure compliance with industry standards."
           }
-          image={"/assets/security-2.png"}
+          image={security2}
           bgImage="/assets/infra-2.jpg"
         />
         <ArticleCard
           title="Customer-Centric Approach"
           description={
-            <div className="py-10 pr-5 md:pl-5">
-              <p className="mb-4 text-4xl font-medium">
-                Customer-Centric Approach
-              </p>
+            <div className="pr-5 md:pl-5">
               <p className="text-l text-sm font-normal">
                 At Consology, your satisfaction is our top priority. Our
                 commitment includes:
               </p>
-              <div className="mt-4 space-y-3">
+              <div className="mt-10 space-y-3">
                 <p>
                   <span className="font-medium">Clear Communication:</span> No
                   technical jargon—just straight-forward explanations.
@@ -98,9 +95,10 @@ const ItSupport = () => {
               </div>
             </div>
           }
-          image={"/assets/customer.png"}
-          bgImage="/assets/contactbg.jpg"
+          image={customer}
+          bgImage="/assets/infra-2.jpg"
           reverse
+          sideImageClassName="border border-[#B7DEF2]"
         />
       </section>
       <CaseStudies />
