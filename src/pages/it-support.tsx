@@ -73,7 +73,8 @@ const ItSupport = () => {
             "Protecting your data is paramount. We implement robust security measures and ensure compliance with industry standards."
           }
           image={security2}
-          bgImage="/assets/infra-2.jpg"
+          bgImage=""
+          className="bg-black"
         />
         <ArticleCard
           title="Customer-Centric Approach"
