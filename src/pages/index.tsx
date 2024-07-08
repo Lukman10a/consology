@@ -2,55 +2,12 @@ import Image from "next/image";
 import { Fragment } from "react";
 
 import help_desk from "../../public/assets/help-desk.png";
-import analyse from "../../public/assets/analyse.png";
-import design from "../../public/assets/design.png";
-import build from "../../public/assets/build.jpg";
-import testing from "../../public/assets/testing.png";
 import chat from "../../public/assets/chat.png";
 import chat2 from "../../public/assets/chat2.png";
 import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
 import CaseStudies from "@/components/caseStudies";
 import { Testimonials } from "@/components/testimonials";
-
-const steps = [
-  {
-    step: "Step 1",
-    bgColor: "bg-black",
-    title: "Analyse",
-    description:
-      "Examine the current situation and identify the benefits and drawbacks of the current systems and processes.",
-    imgSrc: analyse,
-    imgAlt: "analyse",
-  },
-  {
-    step: "Step 2",
-    bgColor: "bg-[#FEA02A]",
-    title: "Design",
-    description:
-      "Devise proposed frameworks and methodologies that can streamline your business goals.",
-    imgSrc: design,
-    imgAlt: "design",
-  },
-  {
-    step: "Step 3",
-    bgColor: "bg-[#57A0E5]",
-    title: "Build",
-    description:
-      "Develop and implement the suggested framework and ascertain the need for use case testing.",
-    imgSrc: build,
-    imgAlt: "build",
-  },
-  {
-    step: "Step 4",
-    bgColor: "bg-black",
-    title: "Testing",
-    description:
-      "Address any issues, apply needed adjustments, perform user testing, and train both Power Users and Administrators.",
-    imgSrc: testing,
-    imgAlt: "testing",
-  },
-];
 
 export default function Home() {
   return (
@@ -94,7 +51,7 @@ export default function Home() {
             <div className="absolute inset-0 -z-[1] bg-black opacity-50"></div>
             <div className="flex-1 space-y-4 self-end text-white">
               <p className="text-5xl font-medium 2md:text-2xl">
-                Cloud Consultancy
+                We Specialize in IT Support & Cloud Consultancy
               </p>
               <p className="">
                 Unlock the Cloud: Our team specializes in Microsoft products and
@@ -111,7 +68,9 @@ export default function Home() {
             <article className="flex-1 space-y-5 rounded-lg border border-[#0000001F] pl-10 pt-10">
               <div className="space-y-3 pr-10">
                 <p className="md:text-x text-5xl font-medium md:text-sm 2md:text-2xl">
-                  <span className="text-[#BBBBBB]">Tailored</span>{" "}
+                  <span className="text-[#BBBBBB]">
+                    We provide Cloud IT Tailored
+                  </span>{" "}
                   <span>Solutions</span>
                 </p>
                 <p className="text-lg font-normal 2md:text-base">

@@ -4,8 +4,9 @@ import React from "react";
 
 interface ArticleCardProps {
   title: string;
-  description: string;
-  image: StaticImageData;
+  description: React.ReactNode | string;
+  className?: string;
+  image: StaticImageData | string;
   bgImage: string;
   reverse?: boolean;
 }
@@ -16,6 +17,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   image,
   bgImage,
   reverse,
+  className,
 }) => {
   return (
     <article
@@ -25,18 +27,31 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
       )}
     >
       <div
-        className={`flex-[3] space-y-6 overflow-hidden rounded-md bg-cover bg-no-repeat p-8 text-white`}
+        className={cn(
+          `h-fit flex-[3] space-y-6 overflow-hidden rounded-md bg-cover bg-no-repeat p-8 text-white`,
+          className,
+        )}
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
         }}
       >
         <p className="text-5xl font-medium">{title}</p>
-        <p className="text-l font-normal">{description}</p>
+        {typeof description === "string" ? (
+          <p className="text-l font-normal">{description}</p>
+        ) : (
+          description
+        )}
         <button className="text-xl underline">Get started</button>
       </div>
-      <div className="flex-[2] overflow-hidden rounded-md">
-        <Image src={image} alt="" className="h-full w-full object-cover" />
+      <div
+        className="flex-[2] overflow-hidden rounded-md bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: "cover",
+        }}
+      >
+        {/* <Image src={image} alt="" className="h-fit object-cover" /> */}
       </div>
     </article>
   );
