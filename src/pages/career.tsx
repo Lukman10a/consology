@@ -150,10 +150,10 @@ export default function Career() {
             celebrated.
           </p>
         </div>
-        <Image src={career} alt="" className="md:hidden" />
+        <Image src={career} alt="" className="md:hidden lg:hidden" />
       </div>
 
-      <div className="grid grid-cols-2 gap-10 p-24 px-36 md:grid-cols-1 md:px-4">
+      <div className="grid grid-cols-2 gap-10 p-24 px-36 md:grid-cols-1 md:px-4 lg:px-6">
         <div>
           <h1 className="text-7xl font-medium">Our Values</h1>
           <p className="text-2xl">What we love and stand for every day</p>
@@ -202,7 +202,7 @@ export default function Career() {
               <p>{job.location}</p>
             </div>
           ))} */}
-          <div className="grid grid-cols-2 gap-14 md:grid-cols-1">
+          <div className="grid grid-cols-2 gap-14 md:grid-cols-1 md:px-6">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Your application process</h2>
               <p>
