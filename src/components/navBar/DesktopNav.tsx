@@ -45,7 +45,7 @@ function DesktopNavbar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        {/* <NavigationMenuItem>
+        <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent p-0 text-white hover:bg-transparent">
             Insight
           </NavigationMenuTrigger>
@@ -68,7 +68,7 @@ function DesktopNavbar() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem> */}
+        </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/it-support" legacyBehavior passHref>
             <NavigationMenuLink className="bg-transparent text-white">

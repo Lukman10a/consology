@@ -33,7 +33,7 @@ export default function Footer() {
               <Link href={"/about"}>About</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
-              <Link href={"/"}>Blog</Link>
+              <Link href={"/blog"}>Blog</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
               <Link href={"/career"}>Career</Link>
