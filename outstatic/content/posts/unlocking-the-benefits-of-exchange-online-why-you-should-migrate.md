@@ -1,6 +1,6 @@
 ---
 title: 'Unlocking the Benefits of Exchange Online: Why You Should Migrate!'
-status: 'draft'
+status: 'published'
 author:
   name: 'Opticrafts'
   picture: 'https://avatars.githubusercontent.com/u/54303765?v=4'
