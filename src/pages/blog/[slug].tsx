@@ -17,6 +17,7 @@ type Post = {
   author: string;
   content: string;
   coverImage: string;
+  description: string;
 };
 
 // Define the Props type
@@ -41,11 +42,11 @@ export default function Index({ post }: Props) {
           Blog
         </h1>
         <p className="border-t-2 py-2 text-xl text-white 2md:text-lg">
-          {post.title}
+          {post.description}
         </p>
       </header>
       <section className="container mx-auto space-y-8 p-12">
-        {post.content}
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </section>
     </Fragment>
   );
@@ -68,6 +69,7 @@ export async function getStaticProps({
     "author",
     "content",
     "coverImage",
+    "desciption",
   ]) as Post;
 
   const content = await remark().use(html).process(post.content);

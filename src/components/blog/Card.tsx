@@ -136,14 +136,14 @@ export default function BlogCard({
       </CardHeader>
       <CardContent>
         <section className="flex flex-col gap-2">
-          <span className="block w-min rounded bg-background px-3 py-1 text-xs font-extrabold">
+          {/* <span className="block w-min rounded bg-background px-3 py-1 text-xs font-extrabold">
             Learning
-          </span>
+          </span> */}
           <p className="text-sm font-medium">
             Published {formatDate(publishedAt)}
           </p>
           <Link href={`/blog/${slug}`}>
-            <h1 className="cursor-pointer text-xl font-extrabold text-primary hover:text-background dark:text-foreground">
+            <h1 className="cursor-pointer text-xl font-extrabold text-primary hover:text-gray-400 dark:text-foreground">
               {title}
             </h1>
           </Link>
