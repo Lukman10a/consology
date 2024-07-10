@@ -18,8 +18,6 @@ type Post = {
 export default function Index({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log({ posts });
-
   return (
     <Fragment>
       <header
@@ -46,7 +44,7 @@ export default function Index({
             title={post.title}
             slug={post.slug}
             publishedAt={post.publishedAt}
-            author={post.author?.name}
+            author={post.author.name}
             description={post.description}
           />
         ))}
