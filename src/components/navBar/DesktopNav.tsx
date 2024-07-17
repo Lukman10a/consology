@@ -66,6 +66,13 @@ function DesktopNavbar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <Link href="/it-training" legacyBehavior passHref>
+            <NavigationMenuLink className="bg-transparent text-white">
+              I.T Training
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
           <Link href="/consultancy" legacyBehavior passHref>
             <NavigationMenuLink className="text-white">
               Consultancy
