@@ -136,13 +136,13 @@ export default function Home() {
       {/* <CaseStudies /> */}
 
       <article className="bg-black p-6 text-white">
-        <div className="bg-custom-gradient flex items-center justify-center rounded-2xl p-10">
+        <div className="bg-custom-gradient flex items-center justify-center rounded-2xl p-10 md:flex-col md:gap-10">
           <div className="space-y-4">
             <Button
               text="Need Help"
               className="rounded-full bg-black p-2 px-4 text-white"
             />
-            <h1 className="text-[90.11px] font-medium">
+            <h1 className="text-[90.11px] font-medium md:w-full 2md:mb-8 2md:text-5xl">
               <span>Need Support</span> <span>Right Now?</span>
             </h1>
             <Button
