@@ -69,8 +69,8 @@ export default function ItTrainingCard() {
   return (
     <section>
       <div className="grid grid-cols-3 gap-4">
-        {ITDATA.map((item) => (
-          <div className="rounded-md border-2 p-4">
+        {ITDATA.map((item, index) => (
+          <div className="rounded-md border-2 p-4" key={index}>
             <div className="flex flex-col items-center space-y-8 border-b-2">
               <Image src={item.image} alt="" className="object-fill" />
               <div className="space-y-8">
