@@ -6,9 +6,8 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { insightsSubnav, servicesSubnav } from ".";
+import { servicesSubnav } from ".";
 import { cn } from "@/lib/utils";
 import Button from "../button";
 
@@ -22,9 +21,6 @@ function DesktopNavbar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          {/* <NavigationMenuTrigger className="bg-transparent p-0 text-white hover:bg-transparent hover:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent">
-            Services
-          </NavigationMenuTrigger> */}
           <NavigationMenuContent>
             <ul className="p-2">
               {servicesSubnav.map((services) => (
@@ -45,30 +41,6 @@ function DesktopNavbar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent p-0 text-white hover:bg-transparent">
-            Insight
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="p-2">
-              {insightsSubnav.map((insights) => (
-                <li key={insights.href}>
-                  <Link href={insights.href} legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                      )}
-                    >
-                      <p className="text-sm font-medium leading-none">
-                        {insights.title}
-                      </p>
-                    </NavigationMenuLink>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <Link href="/it-support" legacyBehavior passHref>
             <NavigationMenuLink className="bg-transparent text-white">

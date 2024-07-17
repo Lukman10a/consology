@@ -12,6 +12,8 @@ export default function Hero({
   containerClass,
   ctaHref = "/contact",
   ctaText = "Contact us",
+  showTechnologyVendors = false,
+  customStyles = {},
 }: {
   heading: string;
   subHeading: string;
@@ -20,6 +22,8 @@ export default function Hero({
   ctaHref?: string;
   ctaText?: string;
   hasBg?: boolean;
+  showTechnologyVendors?: boolean;
+  customStyles?: React.CSSProperties;
 }) {
   return (
     <header
@@ -28,6 +32,7 @@ export default function Hero({
         containerClass,
       )}
       style={{
+        ...customStyles,
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
       }}
@@ -35,7 +40,6 @@ export default function Hero({
       <h1 className="w-10/12 text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
         {heading}
       </h1>
-      {/* <hr /> */}
       {subHeading && (
         <p className="border-t-2 py-2 text-xl text-white 2md:text-lg">
           {subHeading}
@@ -47,7 +51,7 @@ export default function Hero({
         href={ctaHref}
         className="mt-6 inline-block rounded-md bg-white p-2 font-semibold md:w-full"
       />
-      <TechnologyVendors />
+      {showTechnologyVendors && <TechnologyVendors />}
     </header>
   );
 }

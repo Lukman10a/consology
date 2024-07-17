@@ -114,21 +114,12 @@ export default function Career() {
         }}
       >
         <h1 className="text-center text-8xl font-medium text-white 2md:text-5xl">
-          <span>Work at</span> <span className="text-[#FFE59C]">CONSOLOGY</span>{" "}
-          <span>Work in the Great Beyond</span>
+          Consology Careers
         </h1>
-        <div className="mt-6 flex w-full items-center justify-center gap-2">
-          <div className="w-8/12">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full rounded-xl border-2 border-white bg-transparent p-2 pl-6 placeholder:text-white"
-            />
-          </div>
-          <div>
-            <FaSearch size={30} color="white" />
-          </div>
-        </div>
+        <p className="pt-5 text-xl font-medium text-white">
+          All Consology Job Vacancies will be posted here
+        </p>
+
         <Link href={"/contact"} className="mt-6 inline-block">
           <Button
             text={"View all available jobs"}
@@ -182,26 +173,6 @@ export default function Career() {
 
       <div>
         <div className="bg-[#F7F7F7] p-24 px-36 md:px-4">
-          {/* <h1 className="text-center text-7xl font-medium">Open positions</h1> */}
-
-          {/* <div className="my-8 grid grid-cols-5 rounded-md p-5 text-lg">
-            <p className="col-span-2">Position</p>
-            <p>Department</p>
-            <p>Commitment</p>
-            <p>Location</p>
-          </div>
-
-          {JOBPOSITIONS.map((job, index) => (
-            <div
-              key={index}
-              className="my-8 grid cursor-pointer grid-cols-5 rounded-md border-2 p-5 text-lg transition duration-300 ease-in-out hover:bg-white hover:shadow-md"
-            >
-              <p className="col-span-2">{job.position}</p>
-              <p>{job.department}</p>
-              <p>{job.commitment}</p>
-              <p>{job.location}</p>
-            </div>
-          ))} */}
           <div className="grid grid-cols-2 gap-14 md:grid-cols-1 md:px-6">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Your application process</h2>

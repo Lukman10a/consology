@@ -33,9 +33,6 @@ export default function Footer() {
               <Link href={"/about"}>About</Link>
             </li>
             <li className="text-sm text-[#EAECF0]">
-              <Link href={"/"}>Blog</Link>
-            </li>
-            <li className="text-sm text-[#EAECF0]">
               <Link href={"/career"}>Career</Link>
             </li>
           </ul>
