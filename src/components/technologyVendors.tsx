@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TechnologyVendors() {
   return (
-    <div className="flex items-center justify-between gap-6 rounded-md bg-[#0000004D] p-4 text-white md:flex-col md:items-center">
+    <div className="flex items-center justify-between gap-6 rounded-3xl bg-[#0000004D] p-4 py-8 text-white md:flex-col md:items-center">
       <p className="text-xl md:text-lg">Our Technologies and Vendors:</p>
       <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8">
         <div className="w-12">

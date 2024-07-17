@@ -47,6 +47,11 @@ export function MobileMenu() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
+            <Link href="/about" legacyBehavior passHref>
+              About
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
             <Link href="/it-support" legacyBehavior passHref>
               I.T Support
             </Link>
@@ -61,7 +66,7 @@ export function MobileMenu() {
               Career
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuSub>
+          {/* <DropdownMenuSub>
             <DropdownMenuSubTrigger>Insights</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
@@ -74,12 +79,15 @@ export function MobileMenu() {
                 ))}
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
-          </DropdownMenuSub>
+          </DropdownMenuSub> */}
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
           <Link className="w-full" href={"/contact"}>
-            <Button text={"Contact us"} className="bg-black text-white" />
+            <Button
+              text={"Contact us"}
+              className="rounded-md bg-black p-2 text-white"
+            />
           </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>

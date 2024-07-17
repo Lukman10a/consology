@@ -176,6 +176,7 @@ export default function Career() {
           <div className="grid grid-cols-2 gap-14 md:grid-cols-1 md:px-6">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">Your application process</h2>
+
               <p>
                 We value your time and the effort you put in to applying for a
                 role, so we’ll do our best to make your application and

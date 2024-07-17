@@ -106,6 +106,10 @@ const config = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(169.49deg, #262729 -29%, #262729 22.32%, #1E1F21 39.45%, #101010 102.37%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],

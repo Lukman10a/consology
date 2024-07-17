@@ -10,13 +10,23 @@ import {
 import { servicesSubnav } from ".";
 import { cn } from "@/lib/utils";
 import Button from "../button";
+import { useRouter } from "next/router";
 
 function DesktopNavbar() {
+  const router = useRouter();
+
+  const isActive = (href: string) => router.pathname === href;
+
   return (
     <NavigationMenu className="2md:hidden">
       <NavigationMenuList className="space-x-5 rounded-full px-7 py-2 text-black">
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link
+            href="/"
+            legacyBehavior
+            passHref
+            // className={isActive("/") ? "active" : ""}
+          >
             <NavigationMenuLink className="text-white">Home</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -40,6 +50,13 @@ function DesktopNavbar() {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/about" legacyBehavior passHref>
+            <NavigationMenuLink className="bg-transparent text-white">
+              About
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/it-support" legacyBehavior passHref>
@@ -66,7 +83,7 @@ function DesktopNavbar() {
         <NavigationMenuItem>
           <Button
             asLink
-            className="w-full"
+            className="w-full rounded-md bg-white p-2"
             href={"/contact"}
             text={"Contact us"}
           />

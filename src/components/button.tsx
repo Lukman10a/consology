@@ -17,10 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   asLink,
   onClick,
 }) => {
-  const buttonClasses = cn(
-    "rounded-md bg-white p-2 font-medium text-black",
-    className,
-  );
+  const buttonClasses = cn("font-medium text-black", className);
 
   if (asLink && href) {
     return (

@@ -126,16 +126,16 @@ export default function Contact() {
                 <li className="flex items-center gap-3">
                   <FaLocationDot color="#006CFE" />
                   <span>
-                    Unit C22 Imex Business Park, Kings Road. Tyseley, BIRMINGHAM
-                    B11 2AL.
+                    1055 Arthur ave Elk Groot, 67. New Palmas South Carolina.
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <MdWifiCalling3 color="#006CFE" /> <span>+447306129479</span>
+                  <MdWifiCalling3 color="#006CFE" />{" "}
+                  <span>++1 234 678 9108 99</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MdMessage color="#006CFE" />
-                  <span>info@consology.co.uk</span>
+                  <span>Contact@moralizer.com</span>
                 </li>
               </ul>
             </div>

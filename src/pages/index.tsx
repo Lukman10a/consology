@@ -8,6 +8,7 @@ import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
 import CaseStudies from "@/components/caseStudies";
 import { Testimonials } from "@/components/testimonials";
+import headPhone from "../../public/assets/head-phone.png";
 
 export default function Home() {
   return (
@@ -22,20 +23,20 @@ export default function Home() {
         <div className="absolute inset-0 z-[-1] bg-black opacity-50"></div>
         <div className="space-y-6 p-20 md:px-10">
           <h1 className="w-10/12 text-balance text-8xl font-medium text-white 2md:w-fit 2md:text-5xl">
-            Unique Technology Solutions for Businesses
+            Your Trusted I.T. Support & Cloud Consultancy Partners
           </h1>
           <p className="border-t-2 py-2 text-xl text-white 2md:text-lg">
             At Consology, we’re more than just cloud consultants—we’re your
-            end-to-end I.T. support experts. Our mission is to empower
-            businesses by seamlessly integrating technology solutions. Whether
-            you’re considering cloud migration or need robust I.T. support,
-            Consology has you covered.
+            comprehensive I.T. support experts. Our mission is to empower
+            businesses by seamlessly integrating advanced technology solutions.
+            Whether you’re considering cloud migration or need robust I.T.
+            support, Consology has you covered.
           </p>
 
           <Button
             asLink
             text={"Contact us"}
-            className="md:w-full"
+            className="rounded-md bg-white p-2 px-3 md:w-full"
             href="/contact"
           />
 
@@ -51,14 +52,19 @@ export default function Home() {
             <div className="absolute inset-0 -z-[1] bg-black opacity-50"></div>
             <div className="flex-1 space-y-4 self-end text-white">
               <p className="text-5xl font-medium 2md:text-2xl">
-                We Specialize in IT Support & Cloud Consultancy
+                Complete I.T. Support Solutions
               </p>
               <p className="">
-                Unlock the Cloud: Our team specializes in Microsoft products and
-                cloud solutions. We guide you through the entire process, from
-                strategy to implementation.
+                Let us handle your I.T. support needs so you can focus on what
+                truly matters—growing your business. From software
+                troubleshooting to hardware setup, our responsive help desk
+                services ensure your end users remain productive while we manage
+                the technical challenges.
               </p>
-              <Button text="Learn more" />
+              <Button
+                text="Learn more"
+                className="rounded-md bg-white p-2 px-4"
+              />
             </div>
             <div className="">
               <Image src={chat} alt="chat" height={250} width={500} />
@@ -104,7 +110,10 @@ export default function Home() {
                 Responsive Help Desk: Our friendly support staff is ready to
                 assist, whether it’s software troubleshooting or hardware setup.
               </p>
-              <Button text="Learn more" />
+              <Button
+                text="Learn more"
+                className="rounded-md bg-white p-2 px-4"
+              />
             </div>
             <div className="relative">
               <div className="h-full">
@@ -124,7 +133,28 @@ export default function Home() {
         </div>
       </section>
       <Testimonials />
-      <CaseStudies />
+      {/* <CaseStudies /> */}
+
+      <article className="bg-black p-6 text-white">
+        <div className="bg-custom-gradient flex items-center justify-center rounded-2xl p-10">
+          <div className="space-y-4">
+            <Button
+              text="Need Help"
+              className="rounded-full bg-black p-2 px-4 text-white"
+            />
+            <h1 className="text-[90.11px] font-medium">
+              <span>Need Support</span> <span>Right Now?</span>
+            </h1>
+            <Button
+              text="Contact us"
+              className="rounded-full bg-[#006CFE] p-4 px-6 text-white"
+            />
+          </div>
+          <div>
+            <Image src={headPhone} alt="" />
+          </div>
+        </div>
+      </article>
     </Fragment>
   );
 }

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import experienceImg from "../../public/assets/experience.png";
 import swift from "../../public/assets/swift.png";
+import cloud from "../../public/assets/cloud.png";
 import collaborative from "../../public/assets/collaborative.png";
 import Hero from "@/components/hero";
 import CaseStudies from "@/components/caseStudies";
@@ -57,9 +58,10 @@ export default function Consultancy() {
     <Fragment>
       <Hero
         heroBg={"/assets/hero_bg.png"}
-        heading="Cloud Consultancy at its Peak"
-        subHeading="We harness the power of cloud to streamline operations & increase production for business. Our team of expert consultants has years of experience working with small and medium-sized businesses across a range of industries, and we’re dedicated to providing tailored solutions to meet your unique needs."
+        heading="Your Cloud Strategy Partners"
+        subHeading="Wondering how the cloud can help your business? Our expert consultants are here to guide you through the possibilities. With years of experience working with small and medium-sized businesses across various industries, we provide tailored cloud solutions that streamline operations and enhance productivity."
         ctaText="Get started"
+        showTechnologyVendors
       />
       <section className="space-y-4 p-8">
         <ArticleCard
@@ -102,6 +104,21 @@ export default function Consultancy() {
           image={collaborative}
           bgColor="linear-gradient(180deg, #E5E5E5 0%, rgba(255, 255, 255, 0.56) 100%)"
           borderColor="#CFF6FF"
+        />
+        <ArticleCard
+          title={
+            <>
+              <span>Exploring</span>{" "}
+              <span className="text-[#4107BB]">Cloud</span>{" "}
+              <span className="text-[#4107BB]"> Migration </span>{" "}
+              <span> Options?</span>
+            </>
+          }
+          description="Navigating between fully cloud or hybrid solutions? Our tailored approach ensures you make informed decisions. Let's craft a strategy that fits your business seamlessly."
+          image={cloud}
+          bgColor="linear-gradient(180deg, #B7C2FF 0%, rgba(255, 255, 255, 0.56) 100%)"
+          borderColor="#CFF6FF"
+          reverse
         />
       </section>
 

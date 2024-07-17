@@ -23,6 +23,7 @@ const ItSupport = () => {
           "At Consology, we take pride in offering end-to-end I.T. support that ensures your business operates seamlessly. Our holistic approach covers every aspect of your technology ecosystem, from individual end users to the underlying infrastructure."
         }
         heroBg={"/assets/it-support.jpg"}
+        showTechnologyVendors
       />
       <section className="space-y-8 p-10">
         <ArticleCard
@@ -61,7 +62,7 @@ const ItSupport = () => {
         </article>
         <ArticleCard
           title="Backup and Disaster Recovery"
-          description=" We design reliable backup solutions to safeguard your critical data. In case of emergencies, our disaster recovery plans minimize downtime and data loss."
+          description="Our experts oversee your entire infrastructure, including servers, networks, and cloud services. We optimize performance, monitor security, and handle maintenance tasks proactively."
           image={backup}
           bgImage="/assets/backupbg.jpg"
           className="text-black"
@@ -86,12 +87,12 @@ const ItSupport = () => {
               </p>
               <div className="mt-10 space-y-3">
                 <p>
-                  <span className="font-medium">Clear Communication:</span> No
-                  technical jargon—just straight-forward explanations.
+                  <span className="font-medium">Continous improvement:</span> No
+                  We learn from every interaction to enhance our services.{" "}
                 </p>
                 <p>
-                  <span className="font-medium">Continuous Improvement: </span>{" "}
-                  We learn from every interaction to enhance our services.
+                  <span className="font-medium">Clear Communication: </span> No
+                  technical jargon—just straightforward explanations.{" "}
                 </p>
               </div>
             </div>
