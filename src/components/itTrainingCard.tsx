@@ -68,7 +68,7 @@ const ITDATA = [
 export default function ItTrainingCard() {
   return (
     <section>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4 md:grid-cols-1">
         {ITDATA.map((item, index) => (
           <div className="rounded-md border-2 p-4" key={index}>
             <div className="flex flex-col items-center space-y-8 border-b-2">
