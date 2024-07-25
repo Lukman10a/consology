@@ -30,14 +30,24 @@ export default function Contact() {
     setIsFormValid(isFormValid);
 
     setValidationErrors({
-      from_name: from_name.trim() === "" ? "Name is required" : "",
+      from_name:
+        from_name.trim() === ""
+          ? ""
+          : from_name.trim() === ""
+            ? "Name is required"
+            : "",
       user_email:
-        user_email === ""
-          ? "Email is required"
+        user_email.trim() === ""
+          ? ""
           : !isEmailValid
             ? "Invalid email format"
             : "",
-      message: message.trim() === "" ? "Message is required" : "",
+      message:
+        message.trim() === ""
+          ? ""
+          : message.trim() === ""
+            ? "Message is required"
+            : "",
     });
   }, [formData]);
 
