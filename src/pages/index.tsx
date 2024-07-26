@@ -132,11 +132,11 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <CaseStudies /> */}
 
       <article className="bg-black p-6 text-white">
-        <div className="bg-custom-gradient flex items-center justify-center rounded-2xl p-10 md:flex-col md:gap-10">
+        <div className="flex items-center justify-center rounded-2xl bg-custom-gradient p-10 md:flex-col md:gap-10">
           <div className="space-y-4">
             <Button
               text="Need Help"

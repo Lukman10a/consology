@@ -136,16 +136,16 @@ export default function Contact() {
                 <li className="flex items-center gap-3">
                   <FaLocationDot color="#006CFE" />
                   <span>
-                    1055 Arthur ave Elk Groot, 67. New Palmas South Carolina.
+                    Unit C22 Imex Business Park Kings Road Tyseley Birmingham 
+                    B11 2AL
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <MdWifiCalling3 color="#006CFE" />{" "}
-                  <span>++1 234 678 9108 99</span>
+                  <MdWifiCalling3 color="#006CFE" /> <span>+441213459225</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MdMessage color="#006CFE" />
-                  <span>Contact@moralizer.com</span>
+                  <span>info@consology.co.uk</span>
                 </li>
               </ul>
             </div>
