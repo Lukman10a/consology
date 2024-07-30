@@ -23,20 +23,20 @@ export default function ItTraining() {
       />
 
       <section className="p-10">
-        <article className="flex flex-row gap-3 md:flex-col">
+        <article className="flex flex-row gap-3 lg:flex-col">
           {/* <div className="flex-[2] overflow-hidden rounded-lg md:h-[250px] md:flex-auto">
             <Image src={itImg} alt="" className="h-full w-full object-cover" />
           </div> */}
           <section className="flex items-center justify-center py-4">
             <iframe
-              width="560"
+              // width="560"
               height="315"
               src="https://www.youtube-nocookie.com/embed/Jrjldg-LVs4?si=DRw4E2J4cUrhlKJc&amp;controls=0"
               title="Cosology intro"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="aspect-video"
+              className="aspect-video sm:h-full"
             ></iframe>
           </section>
           <div className="flex flex-[3] items-center rounded-lg p-8 md:flex-auto md:p-12">

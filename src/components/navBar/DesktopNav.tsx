@@ -120,7 +120,7 @@ function DesktopNavbar() {
             asLink
             className={cn(
               "w-full rounded-md bg-white p-2",
-              isActive("/contact") && "active text-blue-500",
+              isActive("/contact") && "active bg-blue-500 text-white",
             )}
             href="/contact"
             text="Contact us"
