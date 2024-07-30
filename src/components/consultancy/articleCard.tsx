@@ -35,7 +35,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <div className="space-y-4">
           <p className="text-6xl font-medium md:text-4xl">{title}</p>
           <p className="text-xl md:text-base">{description}</p>
-          <Button text="Get started" className="border-b-2 border-black" />
+          <Button
+            asLink
+            href="/contact"
+            text="Get started"
+            className="border-b-2 border-black"
+          />
         </div>
       </div>
       <div className="flex-[2] overflow-hidden rounded-lg md:h-[250px] md:flex-auto">

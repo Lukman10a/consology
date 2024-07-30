@@ -56,6 +56,8 @@ export default function Home() {
                 the technical challenges.
               </p>
               <Button
+                asLink
+                href="/contact"
                 text="Learn more"
                 className="rounded-md bg-white p-2 px-4"
               />
@@ -105,6 +107,8 @@ export default function Home() {
                 assist, whether it’s software troubleshooting or hardware setup.
               </p>
               <Button
+                asLink
+                href="/contact"
                 text="Learn more"
                 className="rounded-md bg-white p-2 px-4"
               />
@@ -139,6 +143,8 @@ export default function Home() {
               <span>Need Support</span> <span>Right Now?</span>
             </p>
             <Button
+              asLink
+              href="/contact"
               text="Contact us"
               className="rounded-full bg-[#006CFE] p-4 px-6 text-white"
             />
