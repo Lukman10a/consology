@@ -1,5 +1,6 @@
-import * as React from "react";
+import React from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,39 +11,42 @@ import {
 import { servicesSubnav } from ".";
 import { cn } from "@/lib/utils";
 import Button from "../button";
-import { useRouter } from "next/router";
 
 function DesktopNavbar() {
-  const router = useRouter();
+  const pathname = usePathname();
 
-  const isActive = (href: string) => router.pathname === href;
+  const isActive = (href: string) => {
+    return href === "/" ? pathname === href : pathname.startsWith(href);
+  };
 
   return (
     <NavigationMenu className="2md:hidden">
-      <NavigationMenuList className="space-x-5 rounded-full px-7 py-2 text-black">
+      <NavigationMenuList className="space-x-5 rounded-full px-7 text-black">
         <NavigationMenuItem>
-          <Link
-            href="/"
-            legacyBehavior
-            passHref
-            // className={isActive("/") ? "active" : ""}
-          >
-            <NavigationMenuLink className="text-white">Home</NavigationMenuLink>
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuLink
+              className={cn(
+                "text-white",
+                isActive("/") && "active text-blue-500",
+              )}
+            >
+              Home
+            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuContent>
             <ul className="p-2">
-              {servicesSubnav.map((services) => (
-                <li key={services.href}>
-                  <Link href={services.href} legacyBehavior passHref>
+              {servicesSubnav.map((service) => (
+                <li key={service.href}>
+                  <Link href={service.href} legacyBehavior passHref>
                     <NavigationMenuLink
                       className={cn(
                         "block select-none space-y-1 rounded-md bg-transparent p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                       )}
                     >
                       <div className="text-sm font-medium leading-none">
-                        {services.title}
+                        {service.title}
                       </div>
                     </NavigationMenuLink>
                   </Link>
@@ -50,41 +54,63 @@ function DesktopNavbar() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink className="bg-transparent text-white">
+            <NavigationMenuLink
+              className={cn(
+                "active text-white",
+                isActive("/about") && "text-blue-500",
+              )}
+            >
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/it-support" legacyBehavior passHref>
-            <NavigationMenuLink className="bg-transparent text-white">
+            <NavigationMenuLink
+              className={cn(
+                "active text-white",
+                isActive("/it-support") && "text-blue-500",
+              )}
+            >
               I.T Support
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-
         <NavigationMenuItem>
           <Link href="/consultancy" legacyBehavior passHref>
-            <NavigationMenuLink className="text-white">
+            <NavigationMenuLink
+              className={cn(
+                "active text-white",
+                isActive("/consultancy") && "text-blue-500",
+              )}
+            >
               Consultancy
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-
         <NavigationMenuItem>
           <Link href="/it-training" legacyBehavior passHref>
-            <NavigationMenuLink className="bg-transparent text-white">
+            <NavigationMenuLink
+              className={cn(
+                "text-white",
+                isActive("/it-training") && "active text-blue-500",
+              )}
+            >
               I.T Training
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-
         <NavigationMenuItem>
           <Link href="/career" legacyBehavior passHref>
-            <NavigationMenuLink className="text-white">
+            <NavigationMenuLink
+              className={cn(
+                "text-white",
+                isActive("/career") && "active text-blue-500",
+              )}
+            >
               Career
             </NavigationMenuLink>
           </Link>
@@ -92,9 +118,12 @@ function DesktopNavbar() {
         <NavigationMenuItem>
           <Button
             asLink
-            className="w-full rounded-md bg-white p-2"
-            href={"/contact"}
-            text={"Contact us"}
+            className={cn(
+              "w-full rounded-md bg-white p-2",
+              isActive("/contact") && "active text-blue-500",
+            )}
+            href="/contact"
+            text="Contact us"
           />
         </NavigationMenuItem>
       </NavigationMenuList>
