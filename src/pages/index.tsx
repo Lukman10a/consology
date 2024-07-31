@@ -135,12 +135,9 @@ export default function Home() {
       <article className="bg-black p-6 text-white">
         <div className="flex items-center justify-center rounded-2xl bg-custom-gradient p-10 md:flex-col md:gap-10">
           <div className="space-y-4">
-            <Button
-              text="Need Help"
-              className="rounded-full bg-black p-2 px-4 text-white"
-            />
             <p className="text-[90px] font-medium md:w-full 2md:mb-8 2md:text-5xl">
-              <span>Need Support</span> <span>Right Now?</span>
+              <span>Need Support</span> <span>Right Now?</span>{" "}
+              <span>Call +44 121 345 9225</span>
             </p>
             <Button
               asLink
