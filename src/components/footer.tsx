@@ -52,19 +52,25 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-1 justify-end gap-5 md:justify-start">
-        <Link target="_blank" href="https://www.linkedin.com/company/consolgy/">
-          <FaLinkedin size={24} />
-        </Link>
-        <Link target="_blank" href="/">
-          <FaFacebook size={24} />
-        </Link>
-        <Link target="_blank" href="https://x.com/consology">
-          <FaXTwitter size={24} />
-        </Link>
-        <Link target="_blank" href="https://www.instagram.com/consology/">
-          <FaInstagram size={24} />
-        </Link>
+      <div className="space-y-10">
+        <div className="flex flex-1 justify-end gap-5 md:justify-start">
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/consolgy/"
+          >
+            <FaLinkedin size={24} />
+          </Link>
+          <Link target="_blank" href="/">
+            <FaFacebook size={24} />
+          </Link>
+          <Link target="_blank" href="https://x.com/consology">
+            <FaXTwitter size={24} />
+          </Link>
+          <Link target="_blank" href="https://www.instagram.com/consology/">
+            <FaInstagram size={24} />
+          </Link>
+        </div>
+        <p>Need Support Now? Call +44 121 345 9225</p>
       </div>
     </footer>
   );
