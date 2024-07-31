@@ -45,7 +45,7 @@ export default function About() {
           text={"About Us"}
           className="rounded-full bg-[#006CFE] p-2 font-normal text-white"
         />
-        <h1 className="w-11/12 text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
+        <h1 className="w-11/12 text-8xl font-medium text-white 2md:w-full 2md:text-4xl">
           Empowering Businesses with Innovative Cloud and IT Solutions
         </h1>
         <TechnologyVendors />

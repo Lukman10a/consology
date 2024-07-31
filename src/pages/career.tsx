@@ -130,10 +130,10 @@ export default function Career() {
 
       <div>
         <div className="grid grid-cols-2 place-items-start p-20 md:grid-cols-1 md:gap-8 md:p-8">
-          <h1 className="text-7xl font-medium md:text-5xl">
+          <h1 className="text-7xl font-medium md:text-4xl">
             We are a diverse team of people
           </h1>
-          <p className="text-xl sm:text-2xl">
+          <p className="text-xl sm:text-xl">
             At the heart of our organization is a vibrant, multicultural team
             united by a shared passion for innovation and excellence. Our
             collective backgrounds, experiences, and perspectives shape a
@@ -146,8 +146,10 @@ export default function Career() {
 
       <div className="grid grid-cols-2 gap-10 p-24 px-36 md:grid-cols-1 md:px-4 lg:px-6">
         <div>
-          <h1 className="text-7xl font-medium">Our Values</h1>
-          <p className="text-2xl">What we love and stand for every day</p>
+          <h1 className="text-7xl font-medium md:text-4xl">Our Values</h1>
+          <p className="text-2xl md:text-lg">
+            What we love and stand for every day
+          </p>
         </div>
         {CARDS.map((card) => (
           <div

@@ -33,7 +33,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         }}
       >
         <div className="space-y-4">
-          <p className="text-6xl font-medium md:text-4xl">{title}</p>
+          <p className="text-6xl font-medium md:text-3xl">{title}</p>
           <p className="text-xl md:text-base">{description}</p>
           <Button
             asLink

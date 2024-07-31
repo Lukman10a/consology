@@ -16,7 +16,7 @@ export default function Home() {
       <header className="relative isolate overflow-hidden bg-[url('/assets/home_hero_bg.png')] bg-cover bg-no-repeat">
         <div className="absolute inset-0 z-[-1] bg-black opacity-50"></div>
         <div className="space-y-6 p-20 md:px-10">
-          <h1 className="w-10/12 text-balance text-8xl font-medium text-white 2md:w-fit 2md:text-5xl">
+          <h1 className="w-10/12 text-balance text-8xl font-medium text-white 2md:w-fit 2md:text-4xl">
             Your Trusted I.T. Support & Cloud Consultancy Partners
           </h1>
           <p className="border-t-2 py-2 text-xl text-white 2md:text-lg">
@@ -138,7 +138,7 @@ export default function Home() {
             <p className="text-[90px] font-medium md:w-full 2md:mb-8 2md:text-5xl">
               <span>Need Support</span> <span>Right Now?</span>
             </p>
-            <div className="flex justify-between">
+            <div className="flex justify-between md:flex-col md:items-center md:gap-5">
               <Button
                 asLink
                 href="/contact"
@@ -146,7 +146,7 @@ export default function Home() {
                 className="rounded-full bg-[#006CFE] p-4 px-6 text-white"
               />
 
-              <p className="text-4xl">Call +44 121 345 9225</p>
+              <p className="text-4xl md:text-sm">Call +44 121 345 9225</p>
             </div>
           </div>
           <div>

@@ -37,7 +37,7 @@ export default function Hero({
         backgroundSize: "cover",
       }}
     >
-      <h1 className="w-10/12 text-8xl font-medium text-white 2md:w-full 2md:text-5xl">
+      <h1 className="w-10/12 text-8xl font-medium text-white 2md:w-full 2md:text-4xl">
         {heading}
       </h1>
       {subHeading && (

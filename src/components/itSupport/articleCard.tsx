@@ -40,7 +40,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           backgroundSize: "cover",
         }}
       >
-        <p className="text-5xl font-medium">{title}</p>
+        <p className="text-5xl font-medium md:text-3xl">{title}</p>
         {typeof description === "string" ? (
           <p className="text-l font-normal">{description}</p>
         ) : (

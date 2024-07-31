@@ -42,7 +42,9 @@ const ItSupport = () => {
         <article className="flex gap-8 md:flex-col">
           <div className="flex flex-[3] flex-col gap-5">
             <div className="flex-1 space-y-6 overflow-hidden rounded-md bg-[url('/assets/vendor-1.jpg')] bg-cover bg-no-repeat p-10 text-black">
-              <p className="text-5xl font-medium">Vendor Coordination</p>
+              <p className="text-5xl font-medium md:text-3xl">
+                Vendor Coordination
+              </p>
               <p className="text-l font-normal">
                 Dealing with multiple vendors can be complex. Let us manage
                 vendor relationships for you. We collaborate with Microsoft,
