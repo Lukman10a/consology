@@ -136,15 +136,18 @@ export default function Home() {
         <div className="flex items-center justify-center rounded-2xl bg-custom-gradient p-10 md:flex-col md:gap-10">
           <div className="space-y-4">
             <p className="text-[90px] font-medium md:w-full 2md:mb-8 2md:text-5xl">
-              <span>Need Support</span> <span>Right Now?</span>{" "}
-              <span>Call +44 121 345 9225</span>
+              <span>Need Support</span> <span>Right Now?</span>
             </p>
-            <Button
-              asLink
-              href="/contact"
-              text="Contact us"
-              className="rounded-full bg-[#006CFE] p-4 px-6 text-white"
-            />
+            <div className="flex justify-between">
+              <Button
+                asLink
+                href="/contact"
+                text="Contact us"
+                className="rounded-full bg-[#006CFE] p-4 px-6 text-white"
+              />
+
+              <p className="text-4xl">Call +44 121 345 9225</p>
+            </div>
           </div>
           <div>
             <Image src={headPhone} alt="" />
