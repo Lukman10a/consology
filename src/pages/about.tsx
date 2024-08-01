@@ -53,7 +53,7 @@ export default function About() {
 
       <section className="flex justify-between gap-6 p-12 md:flex-wrap">
         <div
-          className="flex-[4] space-y-6 p-12 md:flex-auto"
+          className="flex-[2] space-y-6 p-12 md:flex-auto"
           style={{
             backgroundImage: `url("../assets/about_consology.jpg")`,
             backgroundSize: "cover",

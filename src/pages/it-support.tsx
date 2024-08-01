@@ -51,7 +51,7 @@ const ItSupport = () => {
                 VMWare, Cisco, HP, and others to streamline support.
               </p>
             </div>
-            <div className="flex items-center justify-between gap-5 overflow-hidden rounded-md bg-black p-10">
+            <div className="flex items-center justify-between gap-5 overflow-hidden rounded-md bg-black p-10 md:flex-col md:gap-10">
               <Image src={microsoft} alt="" />
               <Image src={vmware} alt="" />
               <Image src={cisco} alt="" />
