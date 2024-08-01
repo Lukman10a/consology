@@ -6,8 +6,6 @@ import chat from "../../public/assets/chat.png";
 import chat2 from "../../public/assets/chat2.png";
 import Button from "@/components/button";
 import TechnologyVendors from "@/components/technologyVendors";
-import CaseStudies from "@/components/caseStudies";
-import { Testimonials } from "@/components/testimonials";
 import headPhone from "../../public/assets/head-phone.png";
 
 export default function Home() {
@@ -130,8 +128,6 @@ export default function Home() {
           </article>
         </div>
       </section>
-      {/* <Testimonials /> */}
-      {/* <CaseStudies /> */}
       <article className="bg-black p-6 text-white">
         <div className="flex items-center justify-center rounded-2xl bg-custom-gradient p-10 md:flex-col md:gap-10">
           <div className="space-y-4">
