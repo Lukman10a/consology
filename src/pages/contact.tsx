@@ -12,19 +12,19 @@ export default function Contact() {
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     from_name: "",
-    user_email: "",
+    from_email: "",
     message: "",
   });
   const [validationErrors, setValidationErrors] = useState({
     from_name: "",
-    user_email: "",
+    from_email: "",
     message: "",
   });
   const { toast } = useToast();
 
   useEffect(() => {
-    const { from_name, user_email, message } = formData;
-    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user_email);
+    const { from_name, from_email, message } = formData;
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from_email);
     const isFormValid =
       from_name.trim() !== "" && isEmailValid && message.trim() !== "";
     setIsFormValid(isFormValid);
@@ -36,8 +36,8 @@ export default function Contact() {
           : from_name.trim() === ""
             ? "Name is required"
             : "",
-      user_email:
-        user_email.trim() === ""
+      from_email:
+        from_email.trim() === ""
           ? ""
           : !isEmailValid
             ? "Invalid email format"
@@ -79,7 +79,7 @@ export default function Contact() {
           formRef.current.reset();
           setFormData({
             from_name: "",
-            user_email: "",
+            from_email: "",
             message: "",
           });
           toast({
@@ -172,18 +172,18 @@ export default function Contact() {
                     </p>
                   )}
                 </label>
-                <label htmlFor="user_email" className="mb-4 block">
+                <label htmlFor="from_email" className="mb-4 block">
                   <p className="mb-2 text-sm font-semibold">Email</p>
                   <input
                     type="email"
-                    name="user_email"
-                    value={formData.user_email}
+                    name="from_email"
+                    value={formData.from_email}
                     onChange={handleInputChange}
                     className="w-full rounded-lg border border-gray-400 p-3"
                   />
-                  {validationErrors.user_email && (
+                  {validationErrors.from_email && (
                     <p className="text-sm text-red-500">
-                      {validationErrors.user_email}
+                      {validationErrors.from_email}
                     </p>
                   )}
                 </label>
