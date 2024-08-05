@@ -78,7 +78,8 @@ export default function Home() {
                   fit your unique needs.
                 </p>
               </div>
-              <div className="bg-fill h-[300px] w-full bg-[url('/assets/service-tailored.png')] bg-center bg-no-repeat"></div>
+
+              <div className="bg-fill h-[300px] w-full bg-[url('/assets/service-tailored.png')] bg-center bg-no-repeat md:bg-contain"></div>
             </article>
             <article className="flex-1 rounded-lg border border-[#0000001F] bg-[#F9F9F9] pb-10 pl-10">
               <div className="h-[300px] w-full bg-[url('/assets/service-infra.png')] bg-cover bg-center bg-no-repeat md:bg-contain"></div>
