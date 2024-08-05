@@ -13,20 +13,25 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
+    phone_number: "", // Add phone_number to the state
     message: "",
   });
   const [validationErrors, setValidationErrors] = useState({
     from_name: "",
     from_email: "",
+    phone_number: "",
     message: "",
   });
   const { toast } = useToast();
 
   useEffect(() => {
-    const { from_name, from_email, message } = formData;
+    const { from_name, from_email, phone_number, message } = formData;
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from_email);
     const isFormValid =
-      from_name.trim() !== "" && isEmailValid && message.trim() !== "";
+      from_name.trim() !== "" &&
+      isEmailValid &&
+      phone_number.trim() !== "" &&
+      message.trim() !== "";
     setIsFormValid(isFormValid);
 
     setValidationErrors({
@@ -42,6 +47,8 @@ export default function Contact() {
           : !isEmailValid
             ? "Invalid email format"
             : "",
+      phone_number:
+        phone_number.trim() === "" ? "Phone number is required" : "",
       message:
         message.trim() === ""
           ? ""
@@ -80,6 +87,7 @@ export default function Contact() {
           setFormData({
             from_name: "",
             from_email: "",
+            phone_number: "", // Reset phone number as well
             message: "",
           });
           toast({
@@ -184,6 +192,21 @@ export default function Contact() {
                   {validationErrors.from_email && (
                     <p className="text-sm text-red-500">
                       {validationErrors.from_email}
+                    </p>
+                  )}
+                </label>
+                <label htmlFor="phone_number" className="mb-4 block">
+                  <p className="mb-2 text-sm font-semibold">Phone Number</p>
+                  <input
+                    type="tel"
+                    name="phone_number"
+                    value={formData.phone_number}
+                    onChange={handleInputChange}
+                    className="w-full rounded-lg border border-gray-400 p-3"
+                  />
+                  {validationErrors.phone_number && (
+                    <p className="text-sm text-red-500">
+                      {validationErrors.phone_number}
                     </p>
                   )}
                 </label>
