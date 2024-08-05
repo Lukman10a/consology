@@ -21,11 +21,11 @@ const Button: React.FC<ButtonProps> = ({
 
   if (asLink && href) {
     return (
-      <button className={buttonClasses}>
-        <Link href={href} passHref legacyBehavior>
+      <Link href={href} passHref legacyBehavior>
+        <button className={buttonClasses}>
           <a>{text}</a>
-        </Link>
-      </button>
+        </button>
+      </Link>
     );
   }
 
