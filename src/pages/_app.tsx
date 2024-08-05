@@ -8,6 +8,8 @@ import Footer from "@/components/footer";
 import NavBar from "@/components/navBar";
 import NewsLetter from "@/components/newsLetter";
 import { Toaster } from "@/components/ui/toaster";
+import GoogleAnalytics from "@/components/googleAnalytics";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -40,6 +42,22 @@ export default function App({ Component, pageProps }: AppProps) {
           key="description"
         />
         <title>Consology</title>
+
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID}`}
+        />
+
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());  
+
+              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID}', {             
+              });
+          `}
+        </Script>
       </Head>
       <NavBar />
       <main className={`scroll-smooth ${inter.className} ${inter.variable}`}>
