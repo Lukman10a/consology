@@ -10,10 +10,16 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
+  const [touched, setTouched] = useState({
+    from_name: false,
+    from_email: false,
+    phone_number: false,
+    message: false,
+  });
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
-    phone_number: "", // Add phone_number to the state
+    phone_number: "",
     message: "",
   });
   const [validationErrors, setValidationErrors] = useState({
@@ -27,36 +33,50 @@ export default function Contact() {
   useEffect(() => {
     const { from_name, from_email, phone_number, message } = formData;
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from_email);
+    const isPhoneNumberValid = /^[+]?[0-9]{10,15}$/.test(phone_number); // Validates phone numbers with optional + and 10-15 digits
+
     const isFormValid =
       from_name.trim() !== "" &&
       isEmailValid &&
-      phone_number.trim() !== "" &&
+      isPhoneNumberValid &&
       message.trim() !== "";
     setIsFormValid(isFormValid);
 
     setValidationErrors({
       from_name:
         from_name.trim() === ""
-          ? ""
-          : from_name.trim() === ""
+          ? touched.from_name
             ? "Name is required"
-            : "",
+            : ""
+          : "",
       from_email:
         from_email.trim() === ""
-          ? ""
+          ? touched.from_email
+            ? "Email is required"
+            : ""
           : !isEmailValid
-            ? "Invalid email format"
+            ? touched.from_email
+              ? "Invalid email format"
+              : ""
             : "",
       phone_number:
-        phone_number.trim() === "" ? "Phone number is required" : "",
+        phone_number.trim() === ""
+          ? touched.phone_number
+            ? "Phone number is required"
+            : ""
+          : !isPhoneNumberValid
+            ? touched.phone_number
+              ? "Invalid phone number format"
+              : ""
+            : "",
       message:
         message.trim() === ""
-          ? ""
-          : message.trim() === ""
+          ? touched.message
             ? "Message is required"
-            : "",
+            : ""
+          : "",
     });
-  }, [formData]);
+  }, [formData, touched]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -66,6 +86,13 @@ export default function Contact() {
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name } = e.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
   };
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
@@ -87,8 +114,14 @@ export default function Contact() {
           setFormData({
             from_name: "",
             from_email: "",
-            phone_number: "", // Reset phone number as well
+            phone_number: "",
             message: "",
+          });
+          setTouched({
+            from_name: false,
+            from_email: false,
+            phone_number: false,
+            message: false,
           });
           toast({
             title: "Successful",
@@ -172,6 +205,7 @@ export default function Contact() {
                     name="from_name"
                     value={formData.from_name}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     className="w-full rounded-lg border border-gray-400 p-3"
                   />
                   {validationErrors.from_name && (
@@ -187,6 +221,7 @@ export default function Contact() {
                     name="from_email"
                     value={formData.from_email}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     className="w-full rounded-lg border border-gray-400 p-3"
                   />
                   {validationErrors.from_email && (
@@ -202,6 +237,7 @@ export default function Contact() {
                     name="phone_number"
                     value={formData.phone_number}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     className="w-full rounded-lg border border-gray-400 p-3"
                   />
                   {validationErrors.phone_number && (
@@ -218,6 +254,7 @@ export default function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
+                    onBlur={handleBlur}
                     cols={30}
                     rows={10}
                     className="w-full rounded-lg border border-gray-400 p-3"
