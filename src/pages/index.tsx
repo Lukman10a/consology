@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </article>
           <div className="flex justify-between gap-5 2md:flex-wrap">
-            <article className="flex-1 space-y-5 rounded-lg border border-[#0000001F] pl-10 pt-10">
+            <article className="flex-1 space-y-5 rounded-lg border border-[#0000001F] pl-10 pr-10 pt-10">
               <div className="space-y-3 pr-10">
                 <p className="md:text-x text-5xl font-medium md:text-sm 2md:text-2xl">
                   <span className="text-[#BBBBBB]">
